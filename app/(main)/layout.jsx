@@ -1,12 +1,14 @@
-import Footer from "../components/Sidebar/Footer";
-import Sidebar from "../components/Sidebar/Sidebar";
+import Footer from "../components/Footer";
+import Sidebar from "../components/Sidebar";
 
 export default function HomeLayout({ children }) {
   return (
-    <div className="grid grid-cols-8">
-      <Sidebar />
-      {children}
+    <>
+      <div className="h-full flex">
+        <Sidebar />
+        <main className="inline-flex h-full overflow-y-auto">{children}</main>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

@@ -23,8 +23,8 @@ const Sidebar = () => {
   }, [isExpand]);
 
   return (
-    <aside
-      className={`bg-[#D9D9D9] text-zinc-50 fixed md:static md:translate-x-0 z-20 ${
+    <div
+      className={`flex flex-col bg-[#D9D9D9] text-zinc-50 fixed md:translate-x-0 z-20 ${
         isExpand ? "w-96" : "w-16"
       } h-screen transition-all duration-500 ease-in-out `}
     >
@@ -132,7 +132,7 @@ const Sidebar = () => {
           <div className="flex flex-col items-center pt-32">
             <Image src={Logo} height={50} width={50} alt="..." />
           </div>
-          <div className="grid pt-44 grid-flow-row justify-center gap-5">
+          <div className="grid py-40 grid-flow-row justify-center gap-5">
             <div>
               <svg
                 width="24"
@@ -179,7 +179,7 @@ const Sidebar = () => {
           </div>
         </>
       )}
-    </aside>
+    </div>
   );
 };
 
