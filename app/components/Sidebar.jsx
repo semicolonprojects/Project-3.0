@@ -2,18 +2,22 @@
 
 import Image from "next/image";
 import Logo from "@/public/img/logo.png";
+import LogoT from "@/public/img/logo1.png";
 import { useEffect, useState } from "react";
-import { XMarkIcon } from "@heroicons/react/24/solid";
 
 const Sidebar = () => {
   const [isExpand, setisExpand] = useState(false);
 
+  const handleClick = () => {
+    setisExpand(!isExpand);
+};
   useEffect(() => {
     const handleClickOutside = () => {
       if (isExpand) {
         setisExpand(false);
       }
     };
+    
 
     document.addEventListener("click", handleClickOutside);
 
@@ -26,56 +30,46 @@ const Sidebar = () => {
     <div
       className={`flex flex-col bg-[#D9D9D9] text-zinc-50 fixed md:translate-x-0 z-20 ${
         isExpand ? "w-96" : "w-16"
-      } h-screen transition-all duration-500 ease-in-out `}
+      } h-screen transition-all duration-300 ease-out `}
     >
+      <div className="py-8 px-[23px] ">
+      <button onClick={handleClick} 
+    className="flex flex-col justify-center items-center">
+    <span className={`bg-[#4A89B0] block transition-all duration-300 ease-out 
+                    h-0.5 w-5 rounded-sm ${isExpand ? 
+                    'rotate-45 translate-y-1' : '-translate-y-0.5'
+                    }`} >
+    </span>
+    <span className={`bg-[#4A89B0] block transition-all duration-300 ease-out 
+                    h-0.5 w-5 rounded-sm my-0.5 ${isExpand ? 
+                    'opacity-0' : 'opacity-100'
+                    }`} >
+    </span>
+    <span className={`bg-[#4A89B0] block transition-all duration-300 ease-out 
+                    h-0.5 w-5 rounded-sm ${isExpand ? 
+                    '-rotate-45 -translate-y-1' : 'translate-y-0.5'
+                    }`} >
+    </span>    
+
+      </button>
+      </div>
       {isExpand && (
         <>
-          <div className="flex justify-end p-16">
-            <button onClick={() => setisExpand(false)}>
-              <XMarkIcon color="#4A89B0" width={30} height={30} />
-            </button>
+         <div className="absolute px-40 ">
+         <Image src={Logo} className="rotate-90 w-10 " alt="..." />
           </div>
-          <div className="grid grid-flow-row p-5 gap-5">
-            <p>About Us</p>
-            <p>Our Services</p>
-            <p>Our Products</p>
-            <p>Our Stores</p>
+          <div className="my-20 grid grid-flow-row font-bold text-4xl px-20 text-[#4A89B0]  gap-5">
+            <button className="text-left hover:text-[#FFB62B]" >About Us</button>
+            <button className="text-left hover:text-[#FFB62B]">Our Services</button>
+            <button className="text-left hover:text-[#FFB62B]">Our Products</button>
+            <button className="text-left hover:text-[#FFB62B]">Our Socials</button>
+            <button className="text-left hover:text-[#FFB62B]">Our Programs</button>
           </div>
         </>
       )}
-      <div className="grid pt-5 grid-flow-row justify-center gap-5">
+      <div className="grid grid-flow-row justify-center gap-7">
         {!isExpand && (
           <>
-            <div>
-              <button onClick={() => setisExpand(!isExpand)}>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
-                    fill="#4A89B0"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
-                    fill="#4A89B0"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
-                    fill="#4A89B0"
-                  />
-                </svg>
-              </button>
-            </div>
             <div>
               <svg
                 width="24"
@@ -132,7 +126,7 @@ const Sidebar = () => {
           <div className="flex flex-col items-center pt-32">
             <Image src={Logo} height={50} width={50} alt="..." />
           </div>
-          <div className="grid py-40 grid-flow-row justify-center gap-5">
+          <div className="grid py-52 xxl:py-40 grid-flow-row justify-center gap-7">
             <div>
               <svg
                 width="24"
