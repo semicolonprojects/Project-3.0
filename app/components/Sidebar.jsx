@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Logo from "@/public/img/logo.png";
-import LogoT from "@/public/img/logo1.png";
 import { useEffect, useState } from "react";
 
 const Sidebar = () => {
@@ -10,14 +9,13 @@ const Sidebar = () => {
 
   const handleClick = () => {
     setisExpand(!isExpand);
-};
+  };
   useEffect(() => {
     const handleClickOutside = () => {
       if (isExpand) {
         setisExpand(false);
       }
     };
-    
 
     document.addEventListener("click", handleClickOutside);
 
@@ -33,37 +31,49 @@ const Sidebar = () => {
       } h-screen transition-all duration-300 ease-out `}
     >
       <div className="py-8 px-[23px] ">
-      <button onClick={handleClick} 
-    className="flex flex-col justify-center items-center">
-    <span className={`bg-[#4A89B0] block transition-all duration-300 ease-out 
-                    h-0.5 w-5 rounded-sm ${isExpand ? 
-                    'rotate-45 translate-y-1' : '-translate-y-0.5'
-                    }`} >
-    </span>
-    <span className={`bg-[#4A89B0] block transition-all duration-300 ease-out 
-                    h-0.5 w-5 rounded-sm my-0.5 ${isExpand ? 
-                    'opacity-0' : 'opacity-100'
-                    }`} >
-    </span>
-    <span className={`bg-[#4A89B0] block transition-all duration-300 ease-out 
-                    h-0.5 w-5 rounded-sm ${isExpand ? 
-                    '-rotate-45 -translate-y-1' : 'translate-y-0.5'
-                    }`} >
-    </span>    
-
-      </button>
+        <button
+          onClick={handleClick}
+          className="flex flex-col justify-center items-center"
+        >
+          <span
+            className={`bg-[#4A89B0] block transition-all duration-300 ease-out 
+                    h-0.5 w-5 rounded-sm ${
+                      isExpand ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+                    }`}
+          ></span>
+          <span
+            className={`bg-[#4A89B0] block transition-all duration-300 ease-out 
+                    h-0.5 w-5 rounded-sm my-0.5 ${
+                      isExpand ? "opacity-0" : "opacity-100"
+                    }`}
+          ></span>
+          <span
+            className={`bg-[#4A89B0] block transition-all duration-300 ease-out 
+                    h-0.5 w-5 rounded-sm ${
+                      isExpand ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+                    }`}
+          ></span>
+        </button>
       </div>
       {isExpand && (
         <>
-         <div className="absolute px-40 ">
-         <Image src={Logo} className="rotate-90 w-10 " alt="..." />
+          <div className="absolute px-40 ">
+            <Image src={Logo} className="rotate-90 w-10 " alt="..." />
           </div>
           <div className="my-20 grid grid-flow-row font-bold text-4xl px-20 text-[#4A89B0]  gap-5">
-            <button className="text-left hover:text-[#FFB62B]" >About Us</button>
-            <button className="text-left hover:text-[#FFB62B]">Our Services</button>
-            <button className="text-left hover:text-[#FFB62B]">Our Products</button>
-            <button className="text-left hover:text-[#FFB62B]">Our Socials</button>
-            <button className="text-left hover:text-[#FFB62B]">Our Programs</button>
+            <button className="text-left hover:text-[#FFB62B]">About Us</button>
+            <button className="text-left hover:text-[#FFB62B]">
+              Our Services
+            </button>
+            <button className="text-left hover:text-[#FFB62B]">
+              Our Products
+            </button>
+            <button className="text-left hover:text-[#FFB62B]">
+              Our Socials
+            </button>
+            <button className="text-left hover:text-[#FFB62B]">
+              Our Programs
+            </button>
           </div>
         </>
       )}
@@ -126,7 +136,7 @@ const Sidebar = () => {
           <div className="flex flex-col items-center pt-32">
             <Image src={Logo} height={50} width={50} alt="..." />
           </div>
-          <div className="grid py-52 xxl:py-40 grid-flow-row justify-center gap-7">
+          <div className="grid py-52 xxl:py-36 grid-flow-row justify-center gap-7">
             <div>
               <svg
                 width="24"

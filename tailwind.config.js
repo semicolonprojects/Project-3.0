@@ -13,11 +13,11 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
-        "xxl" : {'min': '1920px','max': '2352px'} 
+        xxl: { min: "1920px", max: "2352px" },
       },
       fontFamily: {
         custom: ["Playfair_Display", "serif"],
-    },
+      },
     },
   },
   plugins: [],
