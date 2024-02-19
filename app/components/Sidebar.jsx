@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Logo from "@/public/img/logo.png";
-import LogoT from "@/public/img/logo1.png";
+import Logo from "/public/img/logo.png";
+import LogoT from "/public/img/logo1.png";
 import { useEffect, useState } from "react";
 
 const Sidebar = () => {
@@ -126,7 +126,7 @@ const Sidebar = () => {
           <div className="flex flex-col items-center pt-32">
             <Image src={Logo} height={50} width={50} alt="..." />
           </div>
-          <div className="grid py-52 xxl:py-40 grid-flow-row justify-center gap-7">
+          <div className="grid py-52 xxl:py-52 grid-flow-row justify-center gap-7">
             <div>
               <svg
                 width="24"

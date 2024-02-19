@@ -12,9 +12,11 @@
     "@heroicons/react": "^2.1.1",
     "next": "14.1.0",
     "react": "^18",
+    "react-compare-image": "^3.4.0",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/react": "18.2.56",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
