@@ -6,7 +6,7 @@ import After from "/public/img/after.png";
 
 function Services() {
   const [imageRevealFraq, setImageRevealFraq] = useState(0);
-  const imageContainer = useRef<HTMLDivElement>(undefined);
+  const imageContainer = React.useRef<HTMLDivElement | null>(null);
 
   const slide = (xPosition: number): void => {
     const containerBoundingRect =
@@ -38,8 +38,8 @@ function Services() {
   };
 
   const handleMouseUp = (): void => {
-    window.onmousemove = undefined;
-    window.onmouseup = undefined;
+    window.onmousemove = null;
+    window.onmouseup = null;
   };
 
   return (
