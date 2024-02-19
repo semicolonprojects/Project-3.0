@@ -27,10 +27,10 @@ const Maps = () => {
   }, []);
 
   return (
-    <div className="relative w-auto px-4 md:px-8 lg:px-16 xl:px-32 flex justify-center md:justify-end rounded-md">
+    <div className="pb-5 relative w-auto px-4 md:px-8 lg:px-16 xl:px-32 flex justify-center md:justify-end rounded-md">
       <div className="grid grid-flow-col gap-4 md:gap-8 lg:gap-12">
         <div className="w-full md:w-auto lg:w-auto xl:w-auto">
-          <p className="text-yellow-500 font-bold text-3xl md:text-4xl lg:text-5xl">
+          <p className="py-5 text-yellow-500 font-bold text-3xl md:text-4xl lg:text-5xl">
             Our Store{" "}
           </p>
           {mobileMaps ? (

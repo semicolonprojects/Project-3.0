@@ -26,13 +26,13 @@ const Resi = () => {
 
   return (
     <>
-      <div className="flex justify-center md:px-32 md:justify-end md:w-auto py-2 w-screen">
-        <div className="relative max-w-max px-5 flex-col bg-[#D9D9D9] rounded-xl">
-          <p className="text-yellow-500 font-semibold text-xl md:text-2xl lg:text-3xl text-center">
+      <div className="flex justify-center md:px-32 md:justify-end md:w-auto py-5 w-screen">
+        <div className="relative max-w-max p-5 flex-col shadow-lg bg-[#D9D9D9] rounded-xl">
+          <p className="text-yellow-500 py-2 font-semibold text-xl md:text-2xl lg:text-3xl text-center">
             Cek Resi Kamu Disini
           </p>
           <div className="w-full md:w-[509px] h-auto grid grid-flow-row gap-6">
-            <div className="flex justify-center py-3">
+            <div className="flex justify-center py-1">
               <div className="grid grid-flow-col p-3 bg-gray-300 rounded-xl max-w-sm justify-center gap-4">
                 <MagnifyingGlassIcon
                   className="flex justify-center"

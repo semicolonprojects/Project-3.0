@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const Info = () => {
   return (
+    <>
     <div className="px-28 w-full h-screen">
       <Image
         src={WhiteShoes}
@@ -14,12 +15,12 @@ const Info = () => {
       />
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.72] flex items-center justify-center">
         <div className="text-white text-center max-h-screen md:max-h-max">
-          <p className="text-[#FFB62B] font-bold text-[30px]">
+          <p className="text-[#FFB62B] font-bold text-5xl py-5">
             About Our <br />
             Partnership Program
           </p>
-          <div className="max-w-screen-md max-h-screen">
-            <p className="text-[#4EAEFD] font-semibold text-[15px]">
+          <div className="max-w-screen-md max-h-screen ">
+            <p className="text-[#4EAEFD] text-justify py-2 font-semibold text-xl">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -32,14 +33,14 @@ const Info = () => {
               Lorem Ipsum.
             </p>
           </div>
-          <div className="py-16">
+          <div className="py-10 ">
             <button
               type="button"
-              className="gap-2 flex-row justify-center text-white bg-[#34A853] hover:bg-[#2e7c49] focus:ring-4 focus:outline-none focus:ring-[#5aa476] font-medium rounded-lg text-sm w-full py-2.5 inline-flex items-center me-2 mb-2"
+              className="gap-2 flex-row justify-center text-white bg-[#34A853] hover:bg-[#2e7c49] focus:ring-4 focus:outline-none focus:ring-[#5aa476] font-medium rounded-lg text-xl w-full py-4 inline-flex items-center me-2 mb-2"
             >
               <svg
-                width="20"
-                height="20"
+                width="30"
+                height="30"
                 viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,6 +62,11 @@ const Info = () => {
         </div>
       </div>
     </div>
+
+    <div className="pb-20">
+
+    </div>
+    </>
   );
 };
 

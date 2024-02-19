@@ -30,8 +30,8 @@ const ServicesProducts = () => {
   }, []);
 
   return (
-    <div className="relative px-14 md:px-32">
-      <p className="text-yellow-500 font-bold text-2xl md:text-4xl lg:text-5xl">
+    <div className="relative pt-24 pb-5 px-14 md:px-32">
+      <p className="text-yellow-500 py-5 font-bold text-2xl md:text-4xl lg:text-5xl">
         Our Services & Products
       </p>
       <div className="grid grid-cols-1 md:grid-flow-col gap-5">
@@ -59,26 +59,26 @@ const ServicesProducts = () => {
           )}
         </div>
         <div className="grid grid-flow-row gap-5">
-          <div className="relative w-[300px] h-fit rounded overflow-hidden">
+          <div className="relative w-[300px] max-h-[370px] h-full rounded overflow-hidden">
             <div className="absolute inset-0 bg-black opacity-40"></div>
             <Image
               src={TravelKit}
               alt="..."
-              className="w-full h-full object-cover"
+              className="w-full h-full object-fill  "
             />
-            <div className="absolute inset-x-0 bottom-0 flex items-end justify-end text-white p-4 [writing-mode:vertical-rl] rotate-180">
+            <div className="absolute inset-x-0 bottom-0 flex items-end justify-end font-bold text-white p-4 [writing-mode:vertical-rl] rotate-180">
               <p className="text-center text-[40px]">TRAVEL KIT</p>
             </div>
           </div>
           <div className="rounded overflow-hidden shadow-lg">
-            <div className="relative w-[300px] h-auto rounded overflow-hidden">
+            <div className="relative w-[300px]  max-h-[370px] h-full  rounded overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-40"></div>
               <Image
                 src={Services}
                 alt="..."
-                className="w-full h-full object-cover"
+                className="w-full h-full object-fill"
               />
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-end text-white p-4 [writing-mode:vertical-rl] rotate-180">
+              <div className="absolute inset-x-0 bottom-0 flex items-end justify-end font-bold text-white p-4 [writing-mode:vertical-rl] rotate-180">
                 <p className="text-center text-[40px]">SERVICES</p>
               </div>
             </div>

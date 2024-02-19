@@ -2,14 +2,14 @@ import Link from "next/link";
 
 const Partnership = () => {
   return (
-    <div className="px-4 md:px-8 lg:px-16 xl:px-32 flex flex-col h-auto md:h-96 w-auto">
+    <div className="pt-10 px-4 md:px-8 lg:px-16 xl:px-32 flex flex-col h-auto md:h-96 w-auto">
       <p className="text-[#FFB62B] font-bold text-3xl md:text-4xl lg:text-5xl">
-        Want To Become Our Partner?
+        Want To Become Our Partner ?
       </p>
-      <p className="text-[#4EAEFD] text-base md:text-lg font-bold">
+      <p className="text-[#4EAEFD] px-2 text-base md:text-lg font-bold">
         Learn more about our partnership program below
       </p>
-      <div className="py-5">
+      <div className="py-5 px-2">
         <Link href="/partnership">
           <button
             type="button"
