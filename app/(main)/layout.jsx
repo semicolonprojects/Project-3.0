@@ -6,7 +6,7 @@ export default function HomeLayout({ children }) {
     <>
       <div className="h-full flex">
         <Sidebar />
-        <main className="inline-flex h-full overflow-y-auto">{children}</main>
+        <main className="inline-flex h-full">{children}</main>
       </div>
       <Footer />
     </>

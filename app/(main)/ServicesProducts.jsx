@@ -1,24 +1,62 @@
+"use client";
+
 import TravelKit from "@/public/img/travel_kit.png";
 import Services from "@/public/img/services(sepatu&sikat).jpg";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { detectDevice } from "../utils/deviceUtils";
 
 const ServicesProducts = () => {
+  const [mobilePlayer, setmobilePlayer] = useState(false);
+
+  const handleResize = () => {
+    const { deviceWidth } = detectDevice();
+
+    // Update the state based on the device width
+    setmobilePlayer(deviceWidth < 600);
+  };
+
+  useEffect(() => {
+    // Call the handleResize function when the component mounts
+    handleResize();
+
+    // Add event listener to detect changes in screen size
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="relative px-32 w-full">
-      <p className="text-[#FFB62B] font-bold text-[45px]">
-        Our Services & Products{" "}
+    <div className="relative px-14 md:px-32">
+      <p className="text-yellow-500 font-bold text-2xl md:text-4xl lg:text-5xl">
+        Our Services & Products
       </p>
-      <div className="grid grid-flow-col gap-5">
-        <div className="w-[680px] h-auto rounded overflow-hidden shadow-lg">
-          <iframe
-            src="https://www.youtube.com/embed/e_04ZrNroTo?si=Kfp32-YaVymTGwG8"
-            title="YouTube video player"
-            frameBorder="0"
-            width={703.77}
-            height={760}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
+      <div className="grid grid-cols-1 md:grid-flow-col gap-5">
+        <div className="w-full md:w-[680px] h-auto rounded overflow-hidden shadow-lg">
+          {mobilePlayer ? (
+            <iframe
+              src="https://www.youtube.com/embed/e_04ZrNroTo?si=Kfp32-YaVymTGwG8"
+              title="YouTube video player"
+              frameBorder="0"
+              width={350}
+              height={500}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          ) : (
+            <iframe
+              src="https://www.youtube.com/embed/e_04ZrNroTo?si=Kfp32-YaVymTGwG8"
+              title="YouTube video player"
+              frameBorder="0"
+              width={700}
+              height={760}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          )}
         </div>
         <div className="grid grid-flow-row gap-5">
           <div className="relative w-[300px] h-fit rounded overflow-hidden">

@@ -1,21 +1,59 @@
-import React from "react";
+"use client";
+
+import { useEffect, useState } from "react";
+import { detectDevice } from "../utils/deviceUtils";
 
 const Maps = () => {
+  const [mobileMaps, setmobileMaps] = useState(false);
+
+  const handleResize = () => {
+    const { deviceWidth } = detectDevice();
+
+    // Update the state based on the device width
+    setmobileMaps(deviceWidth < 600);
+  };
+
+  useEffect(() => {
+    // Call the handleResize function when the component mounts
+    handleResize();
+
+    // Add event listener to detect changes in screen size
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="relative w-auto flex justify-end px-32">
-      <div className="grid grid-flow-col gap-36">
-        <div></div>
-        <div>
-          <p className="text-[#FFB62B] font-bold text-[45px]">Our Store </p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15804.924498217451!2d112.6598634!3d-7.9750483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629546317a943%3A0xab55c9dea35e5044!2snettoyer.shoes!5e0!3m2!1sen!2sid!4v1707764046040!5m2!1sen!2sid"
-            width="550"
-            height="350"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+    <div className="relative w-auto px-4 md:px-8 lg:px-16 xl:px-32 flex justify-center md:justify-end rounded-md">
+      <div className="grid grid-flow-col gap-4 md:gap-8 lg:gap-12">
+        <div className="w-full md:w-auto lg:w-auto xl:w-auto">
+          <p className="text-yellow-500 font-bold text-3xl md:text-4xl lg:text-5xl">
+            Our Store{" "}
+          </p>
+          {mobileMaps ? (
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15804.924498217451!2d112.6598634!3d-7.9750483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629546317a943%3A0xab55c9dea35e5044!2snettoyer.shoes!5e0!3m2!1sen!2sid!4v1707764046040!5m2!1sen!2sid"
+              width="300"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          ) : (
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15804.924498217451!2d112.6598634!3d-7.9750483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629546317a943%3A0xab55c9dea35e5044!2snettoyer.shoes!5e0!3m2!1sen!2sid!4v1707764046040!5m2!1sen!2sid"
+              width="550"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          )}
         </div>
       </div>
     </div>

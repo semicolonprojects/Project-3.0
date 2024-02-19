@@ -1,27 +1,40 @@
+"use client";
+
 import Image from "next/image";
 import WhiteShoes from "@/public/img/sepatu_putih(home).png";
+import { useState } from "react";
 
 const About = () => {
+  const [selectedOption, setSelectedOption] = useState("option1");
+
+  const handleRadioChange = (e) => {
+    setSelectedOption(e.target.value);
+  };
+
   return (
     <>
-      <div className="px-32 flex h-screen w-full">
+      <div className="md:px-32 flex h-screen w-full">
         <div className="absolute inset-0">
           <Image
             src={WhiteShoes}
             alt="White Shoes"
-            className="w-full h-full object-cover"
+            className="w-full h-auto object-cover object-center"
           />
         </div>
       </div>
 
-      <div className="text-[#FFB62B] font-semibold absolute px-28">
+      <div className="text-[#FFB62B] font-bold absolute md:px-28 px-3 py-7">
         <div className="grid grid-rows-2">
-          <p className="text-[50px] md:text-[70px]">Nettoyer</p>
+          <p className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl">
+            Nettoyer
+          </p>
           <div className="relative flex items-center">
-            <p className="text-[50px] md:text-[70px]">Shoes</p>
-            <div className="h-10 bg-[#4EAEFD] w-1 ml-2 mt-2"></div>
-            <div className="pt-2 px-2">
-              <p className="text-[#FFB62B] text-[14px]">
+            <p className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl">
+              Shoes
+            </p>
+            <div className="h-10 bg-blue-500 w-1 ml-2 mt-2 md:mt-0"></div>
+            <div className="md:pl-2">
+              <p className="text-[#FFB62B] text-sm md:text-base">
                 Make Your Foot <br />
                 Sparks
               </p>
@@ -42,9 +55,43 @@ const About = () => {
             Cabang ke 2 ini mulai diperkenalkan pada tanggal 24 September 2022.
           </p>
         </div>
+
+        <div>
+          <div>
+            <label>
+              <input
+                type="radio"
+                value="option1"
+                name="options"
+                onChange={handleRadioChange}
+              />
+              Option 1
+            </label>
+            <label>
+              <input
+                type="radio"
+                value="option2"
+                name="options"
+                onChange={handleRadioChange}
+              />
+              Option 2
+            </label>
+          </div>
+
+          {selectedOption === "option1" && <ComponentForOption1 />}
+          {selectedOption === "option2" && <ComponentForOption2 />}
+        </div>
       </div>
     </>
   );
+};
+
+const ComponentForOption1 = () => {
+  return <div>This is Component for Option 1.</div>;
+};
+
+const ComponentForOption2 = () => {
+  return <div>This is Component for Option 2.</div>;
 };
 
 export default About;
