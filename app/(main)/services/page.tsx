@@ -10,18 +10,22 @@ function Services() {
 
   const slide = (xPosition: number): void => {
     const containerBoundingRect =
-      imageContainer.current.getBoundingClientRect();
-    setImageRevealFraq(() => {
-      if (xPosition < containerBoundingRect.left) {
-        return 0;
-      } else if (xPosition > containerBoundingRect.right) {
-        return 1;
-      } else {
-        return (
-          (xPosition - containerBoundingRect.left) / containerBoundingRect.width
-        );
-      }
-    });
+      imageContainer.current?.getBoundingClientRect();
+
+    if (containerBoundingRect) {
+      setImageRevealFraq(() => {
+        if (xPosition < containerBoundingRect.left) {
+          return 0;
+        } else if (xPosition > containerBoundingRect.right) {
+          return 1;
+        } else {
+          return (
+            (xPosition - containerBoundingRect.left) /
+            containerBoundingRect.width
+          );
+        }
+      });
+    }
   };
 
   const handleTouchMove = (event: TouchEvent<HTMLDivElement>): void => {
