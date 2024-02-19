@@ -1,5 +1,6 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const monsterrat = Montserrat({
   subsets: ["latin"],
@@ -13,7 +14,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${monsterrat.className} bg-[#E1EAF3]`}>{children}</body>
+      <body className={`${monsterrat.className} bg-[#E1EAF3]`}>
+        <Toaster />
+        {children}
+      </body>
     </html>
   );
 }

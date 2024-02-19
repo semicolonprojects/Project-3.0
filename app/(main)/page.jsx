@@ -7,7 +7,7 @@ import ServicesProducts from "./ServicesProducts";
 
 const Page = () => {
   return (
-    <div className="min-h-full flex flex-col gap-6">
+    <div className="w-full min-h-full flex flex-col gap-6">
       <About />
       <ServicesProducts />
       <Maps />
