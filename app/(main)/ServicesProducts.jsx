@@ -1,5 +1,5 @@
-import TravelKit from "@/public/img/travel_kit.png";
-import Services from "@/public/img/services(sepatu&sikat).jpg";
+import TravelKit from "../../public/img/travel_kit.png";
+import Services from "../../public/img/services(sepatu&sikat).jpg";
 import Image from "next/image";
 
 const ServicesProducts = () => {

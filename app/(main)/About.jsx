@@ -1,5 +1,5 @@
 import Image from "next/image";
-import WhiteShoes from "@/public/img/sepatu_putih(home).png";
+import WhiteShoes from "../../public/img/sepatu_putih(home).png";
 
 const About = () => {
   return (
