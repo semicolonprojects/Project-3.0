@@ -5,6 +5,7 @@ import Services from "../../public/img/services(sepatu&sikat).jpg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { detectDevice } from "../utils/deviceUtils";
+import Link from "next/link";
 
 const ServicesProducts = () => {
   const [mobilePlayer, setmobilePlayer] = useState(false);
@@ -70,19 +71,21 @@ const ServicesProducts = () => {
               <p className="text-center text-[40px]">TRAVEL KIT</p>
             </div>
           </div>
-          <div className="rounded overflow-hidden shadow-lg">
-            <div className="relative w-[300px]  max-h-[370px] h-full  rounded overflow-hidden">
-              <div className="absolute inset-0 bg-black opacity-40"></div>
-              <Image
-                src={Services}
-                alt="..."
-                className="w-full h-full object-fill"
-              />
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-end font-bold text-white p-4 [writing-mode:vertical-rl] rotate-180">
-                <p className="text-center text-[40px]">SERVICES</p>
+          <Link href="/services">
+            <div className="rounded overflow-hidden shadow-lg">
+              <div className="relative w-[300px]  max-h-[370px] h-full  rounded overflow-hidden">
+                <div className="absolute inset-0 bg-black opacity-40"></div>
+                <Image
+                  src={Services}
+                  alt="..."
+                  className="w-full h-full object-fill"
+                />
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-end font-bold text-white p-4 [writing-mode:vertical-rl] rotate-180">
+                  <p className="text-center text-[40px]">SERVICES</p>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

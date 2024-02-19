@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const DeepClean = () => {
   const [selectedOption, setSelectedOption] = useState("option1");
@@ -47,18 +48,18 @@ const DeepClean = () => {
                     >
                       <path
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="m1 9 4-4-4-4"
                       />
                     </svg>
-                    <a
-                      href="#"
+                    <Link
+                      href="/services"
                       className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
                     >
-                      Projects
-                    </a>
+                      Services
+                    </Link>
                   </div>
                 </li>
                 <li aria-current="page">
@@ -72,14 +73,14 @@ const DeepClean = () => {
                     >
                       <path
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="m1 9 4-4-4-4"
                       />
                     </svg>
                     <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">
-                      Flowbite
+                      Deep Clean
                     </span>
                   </div>
                 </li>
@@ -183,7 +184,7 @@ const DeepClean = () => {
                     Recolor Service
                   </h3>
                 </a>
-                <a href="" className="group">
+                <Link href="/services/reglue" className="group">
                   <div className="aspect-h-1 aspect-w-1 w-[200px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                     <Image
                       src="/img/2.png"
@@ -196,7 +197,7 @@ const DeepClean = () => {
                   <h3 className="mt-2 text-sm text-gray-900 font-semibold">
                     Reglue Service
                   </h3>
-                </a>
+                </Link>
                 <a href="" className="group">
                   <div className="aspect-h-1 aspect-w-1 w-[200px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                     <Image

@@ -89,12 +89,16 @@ const Sidebar = () => {
                 </Link>
               </div>
               <div className="my-20 grid grid-flow-row font-bold text-4xl px-20 text-[#4A89B0]  gap-5">
-                <button className="text-left hover:text-[#FFB62B]">
-                  About Us
-                </button>
-                <button className="text-left hover:text-[#FFB62B]">
-                  Our Services
-                </button>
+                <Link href="/">
+                  <button className="text-left hover:text-[#FFB62B]">
+                    About Us
+                  </button>
+                </Link>
+                <Link href="/services">
+                  <button className="text-left hover:text-[#FFB62B]">
+                    Our Services
+                  </button>
+                </Link>
                 <button className="text-left hover:text-[#FFB62B]">
                   Our Products
                 </button>
