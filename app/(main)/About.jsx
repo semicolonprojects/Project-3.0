@@ -1,16 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import WhiteShoes from "../../public/img/sepatu_putih(home).png";
-import { useState } from "react";
 
 const About = () => {
-  const [selectedOption, setSelectedOption] = useState("option1");
-
-  const handleRadioChange = (e) => {
-    setSelectedOption(e.target.value);
-  };
-
   return (
     <>
       <div className="md:px-32 flex h-screen w-full">
@@ -55,43 +46,9 @@ const About = () => {
             Cabang ke 2 ini mulai diperkenalkan pada tanggal 24 September 2022.
           </p>
         </div>
-
-        <div>
-          <div>
-            <label>
-              <input
-                type="radio"
-                value="option1"
-                name="options"
-                onChange={handleRadioChange}
-              />
-              Option 1
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="option2"
-                name="options"
-                onChange={handleRadioChange}
-              />
-              Option 2
-            </label>
-          </div>
-
-          {selectedOption === "option1" && <ComponentForOption1 />}
-          {selectedOption === "option2" && <ComponentForOption2 />}
-        </div>
       </div>
     </>
   );
-};
-
-const ComponentForOption1 = () => {
-  return <div>This is Component for Option 1.</div>;
-};
-
-const ComponentForOption2 = () => {
-  return <div>This is Component for Option 2.</div>;
 };
 
 export default About;
