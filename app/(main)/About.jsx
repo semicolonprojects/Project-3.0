@@ -9,12 +9,12 @@ const About = () => {
           <Image
             src={WhiteShoes}
             alt="White Shoes"
-            className="w-full h-auto object-cover object-center"
+            className="w-full h-screen object-cover "
           />
         </div>
       </div>
 
-      <div className="text-[#FFB62B] font-bold absolute md:px-28 px-3 py-7">
+      <div className="text-[#FFB62B] font-bold absolute md:px-28 px-3 py-20">
         <div className="grid grid-rows-2">
           <p className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl">
             Nettoyer
@@ -32,9 +32,9 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="pt-5 text-[#4EAEFD] text-xs max-w-72">
+        <div className="pt-5 text-[#4EAEFD] text-sm tracking-tighter leading-relaxed max-w-96">
           <p>
-            Nettoyer.Shoes merupakan usaha di bidang jasa laundry sepatu, tas,
+            Nettoyer Shoes merupakan usaha di bidang jasa laundry sepatu, tas,
             dan topi yang berdiri di kota Malang sejak tahun 2019.
             Nettoyer.Shoes beralamatkan di Jl. Danau Ranau VI G5i7 sawojajar,
             Kota Malang, Jawa Timur. Saat ini kami sudah berhasil menangani
