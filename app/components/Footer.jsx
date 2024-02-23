@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <>
@@ -22,10 +24,16 @@ const Footer = () => {
       <footer className="p-3 self-end inset-x-0 bottom-0 h-16 text-center font-medium text-sm">
         <div className="grid grid-rows-2 justify-items-center gap-2.5">
           <div className="grid grid-cols-4 gap-8">
-            <button className="hover:text-[#FFB62B]">About Us</button>
-            <button className="hover:text-[#FFB62B]">Our Services</button>
+            <Link href="/">
+              <button className="hover:text-[#FFB62B]">About Us</button>
+            </Link>
+            <Link href="/services">
+              <button className="hover:text-[#FFB62B]">Our Services</button>
+            </Link>
             <button className="hover:text-[#FFB62B]">Our Products</button>
-            <button className="hover:text-[#FFB62B]">Our Stores</button>
+            <Link href="https://maps.app.goo.gl/fm4tTUEu3fP76pgz7">
+              <button className="hover:text-[#FFB62B]">Our Stores</button>
+            </Link>
           </div>
           <p className="pointer-events-none">©2024 semicolon projects; </p>
         </div>

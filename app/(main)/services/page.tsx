@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState, useRef, TouchEvent } from "react";
 import Before from "/public/img/before.png";
 import After from "/public/img/after.png";
+import Link from "next/link";
 
 function Services() {
   const [imageRevealFraq, setImageRevealFraq] = useState(0);
@@ -134,7 +135,7 @@ function Services() {
           </div>
           {/*  Cards Service 1 */}
           <div className=" py-5 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-9">
-            <a href="" className="group">
+            <Link href="/services/deep-clean" className="group">
               <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
                   src="/img/1.png"
@@ -147,8 +148,8 @@ function Services() {
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
                 Deep Clean Services
               </h3>
-            </a>
-            <a href="" className="group">
+            </Link>
+            <Link href="/services/reglue" className="group">
               <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
                   src="/img/2.png"
@@ -161,7 +162,7 @@ function Services() {
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
                 Reglue Service
               </h3>
-            </a>
+            </Link>
             <a href="" className="group">
               <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
