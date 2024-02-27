@@ -44,13 +44,13 @@ const Maps = () => {
           <p className="py-5 text-yellow-500 font-bold text-3xl md:text-4xl lg:text-5xl">
             Our Store{" "}
           </p>
-          <div className="justify-center items-start flex flex-wrap sm:flex-nowrap">
+          <div className="items-start flex flex-wrap sm:flex-nowrap">
             {loading ? (
               <Spinner />
             ) : (
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15804.924498217451!2d112.6598634!3d-7.9750483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629546317a943%3A0xab55c9dea35e5044!2snettoyer.shoes!5e0!3m2!1sen!2sid!4v1707764046040!5m2!1sen!2sid"
-                width={mobileMaps ? 300 : 550}
+                width={mobileMaps ? 360 : 550}
                 height={350}
                 style={{ border: 0 }}
                 allowFullScreen=""

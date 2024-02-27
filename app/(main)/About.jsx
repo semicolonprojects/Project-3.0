@@ -1,38 +1,50 @@
+"use client"
 import Image from "next/image";
 import WhiteShoes from "../../public/img/sepatu_putih(home).png";
+import Logo2 from "../../public/img/logo1.png";
+
+
 
 const About = () => {
+
+
   return (
     <>
       <div className="md:px-32 flex h-screen w-full">
-        <div className="absolute inset-0">
+        <div className="hidden tablet:block absolute inset-0 bg-cover">
           <Image
             src={WhiteShoes}
             alt="White Shoes"
-            className="w-full h-screen object-cover "
+            className="w-full h-full tablet:h-3/4 desktop:h-full object-cover"
           />
         </div>
       </div>
 
-      <div className="text-[#FFB62B] font-bold absolute md:px-28 px-3 py-20">
-        <div className="grid grid-rows-2">
-          <p className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl">
+      <div className="text-[#FFB62B] font-bold absolute md:px-28 px-3 py-10 tablet:py-20 ">
+        <div className="block tablet:hidden">
+        <Image
+            src={Logo2}
+            alt="White Shoes"
+            className="items center w-full h-full pb-5"
+          />
+        </div>
+        <div className="inline-flex tablet:grid tablet:grid-rows-2">
+          <p className="text-4xl tablet:text-5xl lg:text-5xl xl:text-6xl">
             Nettoyer
           </p>
-          <div className="relative flex items-center">
-            <p className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl">
+          <div className="block px-3 tablet:px-0 tablet:relative tablet:flex items-center">
+            <p className="text-4xl tablet:text-5xl lg:text-5xl xl:text-6xl">
               Shoes
             </p>
-            <div className="h-10 bg-blue-500 w-1 ml-2 mt-2 md:mt-0"></div>
-            <div className="md:pl-2">
-              <p className="text-[#FFB62B] text-sm md:text-base">
-                Make Your Foot <br />
-                Sparks
+            <div className="hidden tablet:block tablet:h-10 bg-blue-500 w-1 ml-1.5 tablet:ml-2 mt-2 "></div>
+            <div className="pl-0 tablet:pl-1">
+              <p className="text-[#FFB62B] text-base mt-1 tablet:mt-2 -ml-[175px] tablet:ml-0 tablet:relative tablet:text-base ">
+                Make Your Foot <br /> Sparks
               </p>
             </div>
           </div>
         </div>
-        <div className="pt-5 text-[#4EAEFD] text-sm tracking-tighter leading-relaxed max-w-96">
+        <div className="pt-2 font-semibold tablet:font-semibold tablet:pt-5 px-1 tablet:px-0 text-[#4EAEFD] text-sm tablet:text-base tracking-tighter leading-relaxed max-w-96">
           <p>
             Nettoyer Shoes merupakan usaha di bidang jasa laundry sepatu, tas,
             dan topi yang berdiri di kota Malang sejak tahun 2019.

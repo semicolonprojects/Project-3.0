@@ -31,18 +31,18 @@ const ServicesProducts = () => {
   }, []);
 
   return (
-    <div className="relative pt-24 pb-5 px-14 md:px-32">
+    <div className="relative pt-24 pb-5 px-3 tablet:px-32">
       <p className="text-yellow-500 py-5 font-bold text-2xl md:text-4xl lg:text-5xl">
         Our Services & Products
       </p>
       <div className="grid grid-cols-1 md:grid-flow-col gap-5">
-        <div className="w-full md:w-[680px] h-auto rounded overflow-hidden shadow-lg">
+        <div className="w-full tablet:w-[690px] h-auto rounded overflow-hidden">
           {mobilePlayer ? (
             <iframe
               src="https://www.youtube.com/embed/e_04ZrNroTo?si=Kfp32-YaVymTGwG8"
               title="YouTube video player"
               frameBorder="0"
-              width={350}
+              width={365}
               height={500}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
@@ -60,12 +60,12 @@ const ServicesProducts = () => {
           )}
         </div>
         <div className="grid grid-flow-row gap-5">
-          <div className="relative w-[300px] max-h-[370px] h-full rounded overflow-hidden">
+          <div className="relative w-[66%] tablet:w-[370px] max-h-[370px] h-full rounded overflow-hidden">
             <div className="absolute inset-0 bg-black opacity-40"></div>
             <Image
               src={TravelKit}
               alt="..."
-              className="w-full h-full object-fill  "
+              className="w-full h-full bg-fill"
             />
             <div className="absolute inset-x-0 bottom-0 flex items-end justify-end font-bold text-white p-4 [writing-mode:vertical-rl] rotate-180">
               <p className="text-center text-[40px]">TRAVEL KIT</p>
@@ -73,7 +73,7 @@ const ServicesProducts = () => {
           </div>
           <Link href="/services">
             <div className="rounded overflow-hidden shadow-lg">
-              <div className="relative w-[300px]  max-h-[370px] h-full  rounded overflow-hidden">
+              <div className="relative w-[66%] tablet:w-[370px]  max-h-[370px] h-full  rounded overflow-hidden">
                 <div className="absolute inset-0 bg-black opacity-40"></div>
                 <Image
                   src={Services}

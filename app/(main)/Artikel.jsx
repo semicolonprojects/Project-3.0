@@ -7,7 +7,7 @@ const Artikel = () => {
         Artikel
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 xl:gap-10">
-        <div className="rounded overflow-hidden shadow-lg">
+        <div className="w-[66%] h-fit tablet:w-full rounded overflow-hidden shadow-lg">
           <Image
             src="https://images.unsplash.com/photo-1682687219612-b12805df750d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="..."
@@ -37,7 +37,7 @@ const Artikel = () => {
             </span>
           </div>
         </div>
-        <div className="rounded overflow-hidden shadow-lg">
+        <div className="w-[66%] h-fit tablet:w-full rounded overflow-hidden shadow-lg">
           <Image
             src="https://images.unsplash.com/photo-1682687219612-b12805df750d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="..."
@@ -67,7 +67,7 @@ const Artikel = () => {
             </span>
           </div>
         </div>
-        <div className="rounded overflow-hidden shadow-lg">
+        <div className="w-[66%] h-fit tablet:w-full rounded overflow-hidden shadow-lg">
           <Image
             src="https://images.unsplash.com/photo-1682687219612-b12805df750d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="..."

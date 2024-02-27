@@ -13,7 +13,17 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
-        xxl: { min: "1920px", max: "2352px" },
+        'phone': '360px',
+
+
+        'tablet': '760px',
+       
+  
+        'laptop': '1024px',
+        
+  
+        'desktop': '1280px',
+       
       },
       fontFamily: {
         custom: ["Playfair_Display", "serif"],
