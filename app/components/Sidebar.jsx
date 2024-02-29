@@ -52,7 +52,7 @@ const Sidebar = () => {
     <div>
       {isSidebarHidden ? null : (
         <div
-          className={`md:flex flex-col bg-[#D9D9D9] text-zinc-50 fixed md:translate-x-0 z-20 ${
+          className={`hidden tablet:block md:flex flex-col bg-[#D9D9D9] text-zinc-50 fixed md:translate-x-0 z-20 ${
             isExpand ? "w-96" : "w-16"
           } h-screen transition-all duration-300 ease-out`}
         >
@@ -173,12 +173,12 @@ const Sidebar = () => {
           </div>
           {!isExpand && (
             <>
-              <div className="flex flex-col items-center pt-32">
+              <div className="flex flex-col items-center tablet:pt-64 laptop:pt-28 desktop-lg:pt-80">
                 <Link href="/">
                   <Image src={Logo} height={50} width={50} alt="..." />
                 </Link>
               </div>
-              <div className="grid py-52 xxl:py-52 grid-flow-row justify-center gap-7">
+              <div className="grid tablet:py-96 laptop:py-56 desktop:py-36 desktop-sm:py-96 grid-flow-row justify-center gap-7">
                 <div>
                   <Link href="https://www.tiktok.com/@nettoyer.shoes">
                     <svg

@@ -6,9 +6,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { detectDevice } from "../utils/deviceUtils";
 import Link from "next/link";
+import Spinner from "../components/Spinner";
 
 const ServicesProducts = () => {
   const [mobilePlayer, setmobilePlayer] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const handleResize = () => {
     const { deviceWidth } = detectDevice();
@@ -30,32 +32,41 @@ const ServicesProducts = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Simulating map loading delay
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the delay time as needed
+
+    return () => clearTimeout(timeout);
+  }, []); // useEffect runs once after the initial render
+
   return (
     <div className="relative pt-24 pb-5 px-3 tablet:px-32">
       <p className="text-yellow-500 py-5 font-bold text-2xl md:text-4xl lg:text-5xl">
         Our Services & Products
       </p>
       <div className="grid grid-cols-1 md:grid-flow-col gap-5">
-        <div className="w-full tablet:w-[690px] h-auto rounded overflow-hidden">
-          {mobilePlayer ? (
-            <iframe
-              src="https://www.youtube.com/embed/e_04ZrNroTo?si=Kfp32-YaVymTGwG8"
-              title="YouTube video player"
-              frameBorder="0"
-              width={365}
-              height={500}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
+        <div className="w-full tablet:w-[690px] h-auto rounded overflow-hidden ">
+          {loading ? (
+            <div
+              className={`w-[${mobilePlayer ? 366 : 500}px] w-${
+                mobilePlayer ? "screen" : "[366px]"
+              } h-${
+                mobilePlayer ? "[366px]" : "screen"
+              } flex justify-center items-center`}
+            >
+              <Spinner />
+            </div>
           ) : (
             <iframe
-              src="https://www.youtube.com/embed/e_04ZrNroTo?si=Kfp32-YaVymTGwG8"
+              src="https://www.youtube.com/embed/-T9xnc9RmDE?si=cx3H1SiS1ur8nLWM"
               title="YouTube video player"
-              frameBorder="0"
-              width={700}
-              height={760}
+              width={mobilePlayer ? 365 : 700}
+              height={mobilePlayer ? 500 : 760}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
+              loading="lazy"
             />
           )}
         </div>
