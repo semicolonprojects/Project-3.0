@@ -12,7 +12,9 @@ const Footer = () => {
             <Link href="/services">
               <button className="hover:text-[#FFB62B]">Our Services</button>
             </Link>
-            <button className="hover:text-[#FFB62B]">Our Products</button>
+            <Link href="/products">
+              <button className="hover:text-[#FFB62B]">Our Products</button>
+            </Link>
             <Link href="https://maps.app.goo.gl/fm4tTUEu3fP76pgz7">
               <button className="hover:text-[#FFB62B]">Our Stores</button>
             </Link>

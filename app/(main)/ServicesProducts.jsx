@@ -50,7 +50,7 @@ const ServicesProducts = () => {
         <div className="w-full tablet:w-[835px] h-auto rounded overflow-hidden">
           {mobilePlayer ? (
             <iframe
-              src="https://www.youtube.com/embed/e_04ZrNroTo?si=Kfp32-YaVymTGwG8"
+              src="https://www.youtube.com/embed/-T9xnc9RmDE?si=cx3H1SiS1ur8nLWM"
               title="YouTube video player"
               frameBorder="0"
               width={365}
@@ -78,9 +78,11 @@ const ServicesProducts = () => {
               alt="..."
               className="w-full h-full bg-fill"
             />
-            <div className="absolute inset-x-0 bottom-0 flex items-end justify-end font-bold text-white p-4 [writing-mode:vertical-rl] rotate-180">
-              <p className="text-center text-[40px]">PRODUCTS</p>
-            </div>
+            <Link href="/products">
+              <div className="absolute inset-x-0 bottom-0 flex items-end justify-end font-bold text-white p-4 [writing-mode:vertical-rl] rotate-180">
+                <p className="text-center text-[40px]">PRODUCTS</p>
+              </div>
+            </Link>
           </div>
           <Link href="/services">
             <div className="rounded overflow-hidden shadow-lg">
