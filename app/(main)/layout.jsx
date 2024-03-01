@@ -22,7 +22,7 @@ export default function HomeLayout({ children }) {
 
   return (
     <>
-      <div className="h-full flex">
+      <div className="flex h-full">
         <Sidebar />
         <main className="inline-flex h-full">
           {loading ? (

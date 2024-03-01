@@ -6,13 +6,13 @@ const Artikel = () => {
       <p className="py-5 text-[#FFB62B] font-bold text-3xl md:text-4xl lg:text-5xl">
         Artikel
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 xl:gap-10">
-        <div className="w-[66%] h-fit tablet:w-full rounded overflow-hidden shadow-lg">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 xl:gap-8">
+        <div className="w-[66%] h-fit tablet:w-[96%] rounded overflow-hidden shadow-lg">
           <Image
             src="https://images.unsplash.com/photo-1682687219612-b12805df750d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="..."
-            width={200}
-            height={200}
+            width={300}
+            height={300}
             className="object-fill w-full "
           />
           <div className="px-6 py-4">
@@ -37,7 +37,7 @@ const Artikel = () => {
             </span>
           </div>
         </div>
-        <div className="w-[66%] h-fit tablet:w-full rounded overflow-hidden shadow-lg">
+        <div className="w-[66%] h-fit tablet:w-[96%] rounded overflow-hidden mx-6 shadow-lg">
           <Image
             src="https://images.unsplash.com/photo-1682687219612-b12805df750d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="..."
@@ -67,7 +67,7 @@ const Artikel = () => {
             </span>
           </div>
         </div>
-        <div className="w-[66%] h-fit tablet:w-full rounded overflow-hidden shadow-lg">
+        <div className="w-[66%] h-fit tablet:w-[96%] rounded overflow-hidden mx-6 shadow-lg">
           <Image
             src="https://images.unsplash.com/photo-1682687219612-b12805df750d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="..."
