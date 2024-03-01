@@ -99,9 +99,11 @@ const Sidebar = () => {
                     Our Services
                   </button>
                 </Link>
-                <button className="text-left hover:text-[#FFB62B]">
-                  Our Products
-                </button>
+                <Link href="/products">
+                  <button className="text-left hover:text-[#FFB62B]">
+                    Our Products
+                  </button>
+                </Link>
                 <button className="text-left hover:text-[#FFB62B]">
                   Our Socials
                 </button>

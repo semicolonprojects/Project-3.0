@@ -60,19 +60,21 @@ const ServicesProducts = () => {
           )}
         </div>
         <div className="grid grid-flow-row gap-5">
-          <div className="relative w-[66%] tablet:w-[370px] max-h-[370px] h-full rounded overflow-hidden">
+          <div className="relative w-[66%] tablet:w-[370px] max-h-[370px] h-full rounded overflow-hidden transition-all duration-700 hover:scale-110 cursor-pointer">
             <div className="absolute inset-0 bg-black opacity-40"></div>
             <Image
               src={TravelKit}
               alt="..."
               className="w-full h-full bg-fill"
             />
-            <div className="absolute inset-x-0 bottom-0 flex items-end justify-end font-bold text-white p-4 [writing-mode:vertical-rl] rotate-180">
-              <p className="text-center text-[40px]">TRAVEL KIT</p>
-            </div>
+            <Link href="/products">
+              <div className="absolute inset-x-0 bottom-0 flex items-end justify-end font-bold text-white p-4 [writing-mode:vertical-rl] rotate-180">
+                <p className="text-center text-[40px]">PRODUCT</p>
+              </div>
+            </Link>
           </div>
           <Link href="/services">
-            <div className="rounded overflow-hidden shadow-lg">
+            <div className="rounded overflow-hidden shadow-lg transition-all duration-700 hover:scale-110">
               <div className="relative w-[66%] tablet:w-[370px]  max-h-[370px] h-full  rounded overflow-hidden">
                 <div className="absolute inset-0 bg-black opacity-40"></div>
                 <Image

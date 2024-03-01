@@ -55,27 +55,27 @@ function Services() {
         </h1>
         <ul className="flex font-medium text-sm gap-7">
           <li>
-            <a href="" className="hover:underline ">
+            <Link href="#" className="hover:underline ">
               Show All
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="" className="hover:underline ">
+            <Link href="/services" className="hover:underline ">
               {" "}
               Our Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="" className="hover:underline ">
+            <Link href="/products" className="hover:underline ">
               {" "}
               Our Product{" "}
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="" className="hover:underline ">
+            <Link href="" className="hover:underline ">
               {" "}
               Promos{" "}
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -163,7 +163,7 @@ function Services() {
                 Reglue Service
               </h3>
             </Link>
-            <a href="" className="group">
+            <Link href="" className="group">
               <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
                   src="/img/3.png"
@@ -176,8 +176,8 @@ function Services() {
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
                 Repaint Service
               </h3>
-            </a>
-            <a href="" className="group">
+            </Link>
+            <Link href="" className="group">
               <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
                   src="/img/4.png"
@@ -190,12 +190,12 @@ function Services() {
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
                 Recolor Service
               </h3>
-            </a>
+            </Link>
           </div>
 
           {/*  Cards Service 2 */}
           <div className=" py-5 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            <a href="" className="group">
+            <Link href="" className="group">
               <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
                   src="/img/5.png"
@@ -208,8 +208,8 @@ function Services() {
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
                 Custom Paint Service
               </h3>
-            </a>
-            <a href="" className="group">
+            </Link>
+            <Link href="" className="group">
               <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
                   src="/img/6.png"
@@ -222,8 +222,8 @@ function Services() {
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
                 Whitening Upper Service
               </h3>
-            </a>
-            <a href="" className="group">
+            </Link>
+            <Link href="" className="group">
               <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
                   src="/img/7.png"
@@ -236,8 +236,8 @@ function Services() {
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
                 Unyellowing Midsole Service
               </h3>
-            </a>
-            <a href="" className="group">
+            </Link>
+            <Link href="" className="group">
               <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
                   src="/img/8.png"
@@ -250,7 +250,7 @@ function Services() {
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
                 Unyellowing Boost Service
               </h3>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
