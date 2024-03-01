@@ -10,22 +10,22 @@ const About = () => {
 
   return (
     <>
-      <div className="md:px-32 flex h-screen w-full">
-        <div className="hidden tablet:block absolute inset-0 bg-cover">
+      <div className="w-screen h-auto">
+        <div className="hidden tablet:block inset-0">
           <Image
             src={WhiteShoes}
             alt="White Shoes"
-            className="w-full h-full tablet:h-3/4 desktop:h-full object-cover"
+            className=" w-full h-full tablet:h-3/4 desktop:h-full object-fill"
           />
         </div>
       </div>
 
-      <div className="text-[#FFB62B] font-bold absolute md:px-28 px-3 py-10 tablet:py-20 ">
+      <div className="text-[#FFB62B] font-bold absolute tablet:px-32 px-3 py-10 tablet:py-32 ">
         <div className="block tablet:hidden">
         <Image
             src={Logo2}
-            alt="White Shoes"
-            className="items center w-full h-full pb-5"
+            alt="logo2"
+            className="items-center w-80 h-full pb-5"
           />
         </div>
         <div className="inline-flex tablet:grid tablet:grid-rows-2">
