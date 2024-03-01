@@ -38,7 +38,7 @@ const Maps = () => {
   }, []); // useEffect runs once after the initial render
 
   return (
-    <div className="pb-5 relative px-4 md:px-8 lg:px-16 xl:px-32 flex justify-center md:justify-end rounded-md">
+    <div className="pb-5 relative px-4 md:px-8 lg:px-16 desktop:px-32 flex justify-center md:justify-end rounded-md">
       <div className="grid grid-flow-col gap-4 md:gap-8 lg:gap-12">
         <div className="min-w-[550px] w-full md:w-auto lg:w-auto xl:w-auto">
           <p className="py-5 text-yellow-500 font-bold text-3xl md:text-4xl lg:text-5xl">
@@ -46,11 +46,17 @@ const Maps = () => {
           </p>
           <div className="items-start flex flex-wrap sm:flex-nowrap">
             {loading ? (
-              <Spinner />
+              <div
+                className={`w-${
+                  mobileMaps ? "screen" : "full"
+                } h-[350px] flex justify-center items-center`}
+              >
+                <Spinner />
+              </div>
             ) : (
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15804.924498217451!2d112.6598634!3d-7.9750483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629546317a943%3A0xab55c9dea35e5044!2snettoyer.shoes!5e0!3m2!1sen!2sid!4v1707764046040!5m2!1sen!2sid"
-                width={mobileMaps ? 360 : 550}
+                width={mobileMaps ? 360 : 650}
                 height={350}
                 style={{ border: 0 }}
                 allowFullScreen=""

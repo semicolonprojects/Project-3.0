@@ -6,7 +6,7 @@ import LogoT from "/public/img/logo1.png";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { detectDevice } from "../utils/deviceUtils";
-
+import {MagnifyingGlassIcon} from '@heroicons/react/20/solid'
 const Sidebar = () => {
   const [isExpand, setisExpand] = useState(false);
   const [isSidebarHidden, setIsSidebarHidden] = useState(false);
@@ -48,11 +48,12 @@ const Sidebar = () => {
     };
   }, []);
 
+
   return (
     <div>
       {isSidebarHidden ? null : (
         <div
-          className={`md:flex flex-col bg-[#D9D9D9] text-zinc-50 fixed md:translate-x-0 z-20 ${
+          className={`hidden tablet:block md:flex flex-col bg-[#D9D9D9] text-zinc-50 fixed md:translate-x-0 z-20 ${
             isExpand ? "w-96" : "w-16"
           } h-screen transition-all duration-300 ease-out`}
         >
@@ -116,12 +117,13 @@ const Sidebar = () => {
           <div className="grid grid-flow-row justify-center gap-7">
             {!isExpand && (
               <>
-                <div>
-                  <Link href="https://api.whatsapp.com/send?phone=6281232750957">
+                <div >
+                  <Link href="https://api.whatsapp.com/send?phone=6281232750957" title="WhatsApp" aria-label="Whatsapp" >
                     <svg
-                      width="24"
-                      height="24"
+                      width="26"
+                      height="26"
                       viewBox="0 0 24 24"
+                      alt="Whatsapp"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -138,8 +140,28 @@ const Sidebar = () => {
                     </svg>
                   </Link>
                 </div>
-                <div>
-                  <Link href="https://www.instagram.com/nettoyer.shoes/">
+                <div >
+                  <Link href="/cek-status" title="Cek Status" aria-label="Cek Status" >
+                    <MagnifyingGlassIcon
+                    width={26}
+                    height={26}
+                    className="text-[#4A89B0]"
+                    />
+                  </Link>
+                </div>
+              </>
+            )}
+          </div>
+          {!isExpand && (
+            <>
+              <div className="flex flex-col items-center  tablet:pt-64 laptop:pt-48 ">
+                <Link href="/">
+                  <Image src={Logo} height={50} width={50} alt="..." />
+                </Link>
+              </div>
+              <div className="grid py-42 tablet:py-96 laptop:py-[298px] desktop:py-40 grid-flow-row justify-center gap-7">
+              <div>
+                  <Link href="https://www.instagram.com/nettoyer.shoes/" title="Instagram" aria-label="Instagram" >
                     <svg
                       width="24"
                       height="24"
@@ -168,19 +190,8 @@ const Sidebar = () => {
                     </svg>
                   </Link>
                 </div>
-              </>
-            )}
-          </div>
-          {!isExpand && (
-            <>
-              <div className="flex flex-col items-center pt-32">
-                <Link href="/">
-                  <Image src={Logo} height={50} width={50} alt="..." />
-                </Link>
-              </div>
-              <div className="grid py-52 xxl:py-52 grid-flow-row justify-center gap-7">
                 <div>
-                  <Link href="https://www.tiktok.com/@nettoyer.shoes">
+                  <Link href="https://www.tiktok.com/@nettoyer.shoes" title="TikTok" aria-label="TikTok">
                     <svg
                       width="24"
                       height="24"
@@ -193,9 +204,10 @@ const Sidebar = () => {
                         fill="#4A89B0"
                       />
                     </svg>
-                  </Link>
+                  </Link >
                 </div>
                 <div>
+                  <Link href="https://www.tiktok.com/@nettoyer.shoes" title="YouTube" aria-label="YouTube">
                   <svg
                     width="24"
                     height="24"
@@ -223,6 +235,7 @@ const Sidebar = () => {
                       </clipPath>
                     </defs>
                   </svg>
+                  </Link>
                 </div>
               </div>
             </>

@@ -3,10 +3,10 @@ import Link from "next/link";
 const Partnership = () => {
   return (
     <div className="pt-10 px-7 md:px-8 lg:px-16 xl:px-32 flex flex-col h-auto md:h-96 w-screen">
-      <p className="text-[#FFB62B] font-bold text-xl tablet:text-4xl">
-        Want To Become Our Partner ?
+      <p className="text-[#FFB62B] font-bold text-xl tablet:text-5xl">
+        Our Partnership Program
       </p>
-      <p className="text-[#4EAEFD] pt-2 tablet:px-1 font-semibold text-base tablet:text-3xl">
+      <p className="text-[#4EAEFD] pt-2 tablet:px-1 font-semibold text-base tablet:text-[22px]">
         Learn more about our partnership program below
       </p>
       <div className="py-2.5 tablet:py-5 tablet:px-2">
