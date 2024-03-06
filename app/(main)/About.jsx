@@ -1,28 +1,24 @@
-"use client"
+"use client";
 import Image from "next/image";
 import WhiteShoes from "../../public/img/sepatu_putih(home).png";
 import Logo2 from "../../public/img/logo1.png";
 
-
-
 const About = () => {
-
-
   return (
     <>
-      <div className="w-screen h-auto">
-        <div className="hidden tablet:block inset-0">
+      <div className="w-full h-auto">
+        <div className="hidden tablet:block relative">
           <Image
             src={WhiteShoes}
             alt="White Shoes"
-            className=" w-full h-full tablet:h-3/4 desktop:h-full object-fill"
+            className="w-full h-auto tablet:w-full desktop:w-full object-fill"
           />
         </div>
       </div>
 
-      <div className="text-[#FFB62B] font-bold absolute tablet:px-32 px-3 py-10 tablet:py-32 ">
+      <div className="text-[#FFB62B] font-bold tablet:absolute tablet:px-32 px-3 py-10 tablet:py-32 ">
         <div className="block tablet:hidden">
-        <Image
+          <Image
             src={Logo2}
             alt="logo2"
             className="items-center w-80 h-full pb-5"

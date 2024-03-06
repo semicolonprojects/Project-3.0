@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Partnership = () => {
   return (
-    <div className="pt-10 px-7 md:px-8 lg:px-16 xl:px-32 flex flex-col h-auto md:h-96 w-screen">
+    <div className="pt-10 px-7 md:px-8 lg:px-16 xl:px-32 flex flex-col h-auto md:h-96 w-full">
       <p className="text-[#FFB62B] font-bold text-xl tablet:text-5xl">
         Our Partnership Program
       </p>

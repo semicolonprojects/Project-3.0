@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Sidebar from "../components/Sidebar";
 import Spinner from "../components/Spinner";
+import Navbar from "../components/Navbar";
 
 export default function HomeLayout({ children }) {
   const [loading, setLoading] = useState(true);
@@ -22,11 +23,12 @@ export default function HomeLayout({ children }) {
 
   return (
     <>
+      <Navbar />
       <div className="flex h-full">
         <Sidebar />
-        <main className="inline-flex h-full">
+        <main className="inline-flex flex-col h-full w-full">
           {loading ? (
-            <div className="h-screen w-screen flex justify-center items-center">
+            <div className="flex-grow flex justify-center items-center">
               <Spinner />
             </div>
           ) : (

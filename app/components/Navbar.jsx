@@ -2,17 +2,27 @@
 
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { XMarkIcon } from "@heroicons/react/24/solid";
-import { useState } from "react";
+import { useCallback, useEffect, useState, useMemo } from "react";
 import { AnimatePresence, animations, motion } from "framer-motion";
 import Link from "next/link";
 import Logo from "../../public/img/logo1.png";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [showNavbar, setshowNavbar] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  const router = usePathname();
+
+  const onScroll = () => {
+    setScrollY(window.pageYOffset);
+  };
+
+  const isTop = useMemo(() => scrollY === 0, [scrollY]);
 
   const tooglerNavbar = () => {
-    setshowNavbar(!showNavbar);
+    setshowNavbar((showNavbar) => !showNavbar);
   };
 
   const closeNavbar = () => {
@@ -36,13 +46,54 @@ const Navbar = () => {
     visible: { opacity: 1, x: 0 },
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll, { passive: true });
+    };
+  }, []);
+
+  useEffect(() => {
+    // Close the navbar when the route changes
+    closeNavbar();
+  }, [router]); // Listen to changes in the route
+
   return (
     <>
-      <div className="tablet:hidden flex justify-end items-end z-10 w-screen p-3">
-        <button onClick={tooglerNavbar}>
-          <Bars3Icon className="h-12 w-12 text-[#4A89B0]" />
-        </button>
+      {isTop && (
+        <nav className="hidden tablet:block bg-[#D9D9D9] p-4 text-[#4A89B0] fixed w-full z-10">
+          {/* Your navbar content goes here */}
+          <p className="text-center text-4xl">PROMOPROMOPROMO</p>
+        </nav>
+      )}
+
+      <div
+        className={`block tablet:hidden w-full ${
+          isTop ? "inline-block" : "hidden"
+        } z-20 left-0  absolute bg-red-500 text-center py-3 h-11`}
+        tabIndex={10}
+        aria-hidden="true"
+      >
+        <p>PROMOPROMOPROMO</p>
       </div>
+      <nav
+        className={`tablet:hidden fixed ${
+          isTop ? "inset-y-10" : "inset-y-0"
+        }  inline-flex justify-between items-center z-10 h-fit w-screen p-2 bg-[#D9D9D9] shadow-md`}
+      >
+        {/* Logo on the left */}
+        <div className="flex items-end">
+          <img src="your-logo.png" alt="Logo" className="h-12 w-12" />
+        </div>
+
+        {/* Icon on the right */}
+        <div>
+          <button onClick={tooglerNavbar}>
+            <Bars3Icon className="h-12 w-12 text-[#4A89B0]" />
+          </button>
+        </div>
+      </nav>
 
       <AnimatePresence>
         {showNavbar && (
