@@ -74,8 +74,10 @@ const Navbar = () => {
         className={`${
           showNavbar ? "hidden" : "block"
         } block tablet:hidden w-full ${
-          isTop ? "inline-block" : "hidden"
-        } z-20 left-0  absolute bg-red-500 text-center py-3 h-11`}
+          isTop
+            ? "translate-y-1 transition-transform"
+            : "translate-y-0 transition-transform"
+        } z-20 left-0  absolute bg-red-500 text-center p-3 h-11`}
         tabIndex={10}
         aria-hidden="true"
       >
@@ -83,18 +85,29 @@ const Navbar = () => {
       </div>
       <nav
         className={`tablet:hidden fixed ${
-          isTop ? "inset-y-10" : "inset-y-0"
-        }  inline-flex justify-between items-center z-10 h-fit w-screen p-2 bg-[#D9D9D9] shadow-md`}
+          isTop
+            ? "translate-y-12 transition-transform "
+            : " translate-y-0 transition-transform"
+        }  inline-flex justify-between  items-center z-10 h-fit w-screen p-1 bg-[#D9D9D9] shadow-lg`}
       >
         {/* Logo on the left */}
-        <div className="flex items-end">
-          <img src="your-logo.png" alt="Logo" className="h-12 w-12" />
+        <div className="inline-flex pl-2">
+          <Link href="/">
+            <p className="font-bold text-2xl text-[#FFB62B] cursor-pointer">
+              NETT <br /> OYER{" "}
+            </p>
+          </Link>
         </div>
 
         {/* Icon on the right */}
-        <div>
+        <div className="grid grid-flow-col gap-2  pr-2">
+          <Link href="/cek-status">
+            <button className="w-24 mt-1.5 rounded-lg text-white text-center text-xs font-semibold p-2.5 bg-[#4A89B0]">
+              Cek Resi
+            </button>
+          </Link>
           <button onClick={tooglerNavbar}>
-            <Bars3Icon className="h-12 w-12 text-[#4A89B0]" />
+            <Bars3Icon className=" h-12 w-10 items-center text-[#4A89B0]" />
           </button>
         </div>
       </nav>
