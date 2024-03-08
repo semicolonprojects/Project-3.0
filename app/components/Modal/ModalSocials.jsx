@@ -3,11 +3,11 @@ import Modal from "./Modal";
 
 const ModalSocials = ({ showModal, setshowModal }) => {
   return (
-    <Modal isVisible={showModal} onClose={() => setshowModal(false)} title="">
-        <h2 className="text-2xl font-bold mb-2 align-top text-center text-[#4A89B0]">
-          Connect with Us on Social Media
+    <Modal isVisible={showModal} onClose={() => setshowModal(false)} title="" >
+        <h2 className="text-3xl  font-bold mb-2 align-top text-center text-[#4A89B0]">
+          Connect With Us 
         </h2>
-      <div className="bg-white p-8 rounded-md">
+      <div className="bg-white px-5 py-3 rounded-md">
         <div className="grid grid-cols-2 tablet:grid-flow-col gap-8 justify-center items-center">
           <Link
             href="https://api.whatsapp.com/send?phone=6281232750957"

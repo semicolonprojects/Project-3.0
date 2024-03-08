@@ -75,8 +75,8 @@ const Navbar = () => {
           showNavbar ? "hidden" : "block"
         } block tablet:hidden w-full ${
           isTop
-            ? "translate-y-1 transition-transform"
-            : "translate-y-0 transition-transform"
+            ? "translate-y-0 transition-transform duration-75 touch-pan-y"
+            : "transform-none transition-transform"
         } z-20 left-0  absolute bg-red-500 text-center p-3 h-11`}
         tabIndex={10}
         aria-hidden="true"
@@ -86,8 +86,8 @@ const Navbar = () => {
       <nav
         className={`tablet:hidden fixed ${
           isTop
-            ? "translate-y-12 transition-transform "
-            : " translate-y-0 transition-transform"
+            ? "translate-y-11 transition-transform duration-[70ms] "
+            : " transform-none transition-transform"
         }  inline-flex justify-between  items-center z-10 h-fit w-screen p-1 bg-[#D9D9D9] shadow-lg`}
       >
         {/* Logo on the left */}
@@ -158,6 +158,7 @@ const Navbar = () => {
                   Our Services
                 </motion.button>
               </Link>
+              <Link href="/products">
               <motion.button
                 key=" Our Products"
                 initial="hidden"
@@ -169,6 +170,7 @@ const Navbar = () => {
               >
                 Our Products
               </motion.button>
+              </Link>
               <motion.button
                 key="Our Socials"
                 initial="hidden"
