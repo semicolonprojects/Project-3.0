@@ -4,10 +4,10 @@ import Modal from "./Modal";
 const ModalSocials = ({ showModal, setshowModal }) => {
   return (
     <Modal isVisible={showModal} onClose={() => setshowModal(false)} title="">
-      <div className="bg-white p-8 rounded-md">
-        <h2 className="text-2xl font-bold mb-4 text-center text-[#4A89B0]">
+        <h2 className="text-2xl font-bold mb-2 align-top text-center text-[#4A89B0]">
           Connect with Us on Social Media
         </h2>
+      <div className="bg-white p-8 rounded-md">
         <div className="grid grid-cols-2 tablet:grid-flow-col gap-8 justify-center items-center">
           <Link
             href="https://api.whatsapp.com/send?phone=6281232750957"
@@ -32,7 +32,7 @@ const ModalSocials = ({ showModal, setshowModal }) => {
                 fill="#4A89B0"
               />
             </svg>
-            WhatsApp
+            <p className="pl-1.5" > WhatsApp </p> 
           </Link>
           <Link
             href="https://www.instagram.com/nettoyer.shoes/"
@@ -64,7 +64,7 @@ const ModalSocials = ({ showModal, setshowModal }) => {
                 fill="#4A89B0 "
               />
             </svg>
-            Instagram
+            <p className="pl-1.5" > Instagram </p>
           </Link>
           <Link
             href="https://www.tiktok.com/@nettoyer.shoes"
@@ -82,7 +82,7 @@ const ModalSocials = ({ showModal, setshowModal }) => {
                 fill="#4A89B0"
               />
             </svg>
-            TikTok
+            <p className="pl-1.5" > TikTok </p>
           </Link>
           <Link
             href="#"
@@ -115,7 +115,7 @@ const ModalSocials = ({ showModal, setshowModal }) => {
                 </clipPath>
               </defs>
             </svg>
-            YouTube
+            <p className="pl-1.5" > Youtube </p>
           </Link>
           {/* Add more social media links with SVG icons as needed */}
         </div>

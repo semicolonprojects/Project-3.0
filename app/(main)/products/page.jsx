@@ -29,33 +29,39 @@ const Page = () => {
 
   return (
     <>
-      <div className="hidden tablet:block relative overflow-hidden px-24">
-        <h1 className="py-5 font-bold tracking-tight leading-none text-xl tablet:text-[45px] text-[#FFB62B]">
-          Product For Your Shoes
+      <div className="hidden tablet:block overflow-hidden px-5 laptop:px-44 py-7">
+        <h1 className="pt-9 font-bold tracking-tight leading-none text-xl tablet:text-[70px] text-[#FFB62B]">
+          Product For You
         </h1>
-        <ul className="flex font-medium text-sm gap-7">
+        <ul className="pt-5 pl-1 flex font-medium text-sm gap-7">
           <li>
-            <a href="" className="hover:underline ">
-              Show All
-            </a>
+            <Link href="#" className="hover:underline ">
+              All Products
+            </Link>
           </li>
           <li>
-            <a href="" className="hover:underline ">
+            <Link href="/services" className="hover:underline ">
               {" "}
-              Our Services
-            </a>
+              Shoes Care
+            </Link>
           </li>
           <li>
-            <a href="" className="hover:underline ">
+            <Link href="/products" className="hover:underline ">
               {" "}
-              Our Product{" "}
-            </a>
+              Sandals Care{" "}
+            </Link>
           </li>
           <li>
-            <a href="" className="hover:underline ">
+            <Link href="" className="hover:underline ">
               {" "}
-              Promos{" "}
-            </a>
+              Bag Care{" "}
+            </Link>
+          </li>
+          <li>
+            <Link href="" className="hover:underline ">
+              {" "}
+              Hat Care{" "}
+            </Link>
           </li>
         </ul>
         <div className="py-5">
@@ -65,19 +71,19 @@ const Page = () => {
               <Spinner />
             </div>
           ) : (
-            <div className=" py-5 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-9">
+            <div className=" py-2 grid grid-cols-2 gap-x-20 gap-y-10 tablet:grid-cols-4 laptop:grid-cols-4 desktop:grid-cols-4">
               {products?.map((product) => (
                 <Link
                   href={`products/${product.slug}`}
                   className="group"
                   key={product.id}
                 >
-                  <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
+                  <div className="aspect-h-1 aspect-w-1 w-[289px] h-[389px] overflow-hidden bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                     <Image
                       src={product.imageUrl}
                       alt={product.productName}
-                      width="217"
-                      height="287"
+                      width="289"
+                      height="389"
                       className="h-full w-full object-cover group-hover:opacity-75"
                     />
                   </div>
@@ -126,7 +132,7 @@ const Page = () => {
               <Spinner />
             </div>
           ) : (
-            <div className=" py-5 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-9">
+            <div className=" py-2 grid grid-cols-2 gap-x-20 gap-y-10 tablet:grid-cols-4 laptop:grid-cols-4 desktop:grid-cols-4">
               {products?.map((product) => (
                 <Link
                   href={`products/${product.slug}`}
