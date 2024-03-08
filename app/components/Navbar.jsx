@@ -71,7 +71,9 @@ const Navbar = () => {
       )}
 
       <div
-        className={`block tablet:hidden w-full ${
+        className={`${
+          showNavbar ? "hidden" : "block"
+        } block tablet:hidden w-full ${
           isTop ? "inline-block" : "hidden"
         } z-20 left-0  absolute bg-red-500 text-center py-3 h-11`}
         tabIndex={10}

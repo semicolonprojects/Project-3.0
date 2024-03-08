@@ -6,11 +6,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { detectDevice } from "../utils/deviceUtils";
 import Link from "next/link";
-import Spinner from "../components/Spinner";
 
 const ServicesProducts = () => {
   const [mobilePlayer, setmobilePlayer] = useState(false);
-  const [loading, setLoading] = useState(true);
 
   const handleResize = () => {
     const { deviceWidth } = detectDevice();
@@ -32,15 +30,6 @@ const ServicesProducts = () => {
     };
   }, []);
 
-  useEffect(() => {
-    // Simulating map loading delay
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 2000); // Adjust the delay time as needed
-
-    return () => clearTimeout(timeout);
-  }, []); // useEffect runs once after the initial render
-
   return (
     <div className="relative pt-24 pb-5 px-3 tablet:mx-24 tablet:w-[85.9%] w-full">
       <p className="text-yellow-500 py-5 font-bold text-2xl md:text-4xl lg:text-5xl">
@@ -57,6 +46,7 @@ const ServicesProducts = () => {
               height={500}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
+              loading="lazy"
             />
           ) : (
             <iframe
