@@ -8,10 +8,12 @@ import Link from "next/link";
 import Logo from "../../public/img/logo1.png";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import ModalSocials from "./Modal/ModalSocials";
 
 const Navbar = () => {
   const [showNavbar, setshowNavbar] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [showModal, setshowModal] = useState(false);
 
   const router = usePathname();
 
@@ -69,7 +71,9 @@ const Navbar = () => {
       )}
 
       <div
-        className={`block tablet:hidden w-full ${
+        className={`${
+          showNavbar ? "hidden" : "block"
+        } block tablet:hidden w-full ${
           isTop ? "inline-block" : "hidden"
         } z-20 left-0  absolute bg-red-500 text-center py-3 h-11`}
         tabIndex={10}
@@ -159,6 +163,7 @@ const Navbar = () => {
                 exit="hidden"
                 variants={contentVariants}
                 transition={{ delay: 1.2 }}
+                onClick={setshowModal}
                 className="hover:text-[#FFB62B]"
               >
                 Our Socials
@@ -180,6 +185,8 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <ModalSocials showModal={showModal} setshowModal={setshowModal} />
     </>
   );
 };

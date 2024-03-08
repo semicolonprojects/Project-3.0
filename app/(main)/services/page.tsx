@@ -49,44 +49,50 @@ function Services() {
 
   return (
     <>
-      <div className="relative overflow-hidden px-24">
-        <h1 className=" py-5 font-bold tracking-tight leading-none text-[45px] text-[#FFB62B]">
-          Services For Your Shoes
+      <div className="relative overflow-hidden px-5 laptop:px-44 py-7">
+        <h1 className=" pt-9 font-bold tracking-tight leading-none text-[70px] text-[#FFB62B]">
+          Services For You
         </h1>
-        <ul className="flex font-medium text-sm gap-7">
+        <ul className="pt-5 pl-1 flex font-medium text-sm gap-7">
           <li>
             <Link href="#" className="hover:underline ">
-              Show All
+              All Services
             </Link>
           </li>
           <li>
             <Link href="/services" className="hover:underline ">
               {" "}
-              Our Services
+              Shoes Care
             </Link>
           </li>
           <li>
             <Link href="/products" className="hover:underline ">
               {" "}
-              Our Product{" "}
+              Sandals Care{" "}
             </Link>
           </li>
           <li>
             <Link href="" className="hover:underline ">
               {" "}
-              Promos{" "}
+              Bag Care{" "}
+            </Link>
+          </li>
+          <li>
+            <Link href="" className="hover:underline ">
+              {" "}
+              Hat Care{" "}
             </Link>
           </li>
         </ul>
 
-        <div className="py-5">
-          <div
+        <div className="py-5 w-full">
+          {/* <div
             ref={imageContainer}
             className="max-w-[977px] w-full h-fit mx-auto relative select-none"
           >
             <Image
               src={Before}
-              className="h-[430px] pointer-events-none"
+              className="h-[530px] w-fill pointer-events-none"
               alt="..."
             />
 
@@ -97,7 +103,7 @@ function Services() {
                   imageRevealFraq * 100
                 }% 100%, 0 100%)`,
               }}
-              className="h-[430px] absolute inset-0  pointer-events-none"
+              className="h-[530px] w-fill absolute inset-0  pointer-events-none"
               alt="..."
             />
 
@@ -132,125 +138,125 @@ function Services() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/*  Cards Service 1 */}
-          <div className=" py-5 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-9">
+          <div className=" py-2 grid grid-cols-2 gap-x-20 gap-y-10 tablet:grid-cols-4 laptop:grid-cols-4 desktop:grid-cols-4 ">
             <Link href="/services/deep-clean" className="group">
-              <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
+              <div className="aspect-h-1 aspect-w-1 w-[289px] h-[389px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
                   src="/img/1.png"
                   alt="..."
-                  width="217"
-                  height="287"
+                  width="289"
+                  height="389"
                   className="h-full w-full object-cover  group-hover:opacity-75"
                 />
               </div>
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
-                Deep Clean Services
+                Services For Your Shoes & Sandals
               </h3>
             </Link>
             <Link href="/services/reglue" className="group">
-              <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
+              <div className="aspect-h-1 aspect-w-1  w-[289px] h-[389px]  overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
                   src="/img/2.png"
                   alt="..."
-                  width="217"
-                  height="287"
+                  width="289"
+                  height="389"
                   className="h-full w-full object-cover  group-hover:opacity-75"
                 />
               </div>
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
-                Reglue Service
+                Services For Your Bags
               </h3>
             </Link>
             <Link href="" className="group">
-              <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
+              <div className="aspect-h-1 aspect-w-1  w-[289px] h-[389px]  overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
                   src="/img/3.png"
                   alt="..."
-                  width="217"
-                  height="287"
+                  width="289"
+                  height="389"
                   className="h-full w-full object-cover  group-hover:opacity-75"
                 />
               </div>
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
-                Repaint Service
+                Services For Your Hats
               </h3>
             </Link>
             <Link href="" className="group">
-              <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
+              <div className="aspect-h-1 aspect-w-1  w-[289px] h-[389px]  overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
-                  src="/img/4.png"
+                  src="/img/3.png"
                   alt="..."
-                  width="217"
-                  height="287"
+                  width="289"
+                  height="389"
                   className="h-full w-full object-cover  group-hover:opacity-75"
                 />
               </div>
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
-                Recolor Service
+                Other Services
               </h3>
             </Link>
+           
           </div>
-
-          {/*  Cards Service 2 */}
-          <div className=" py-5 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            <Link href="" className="group">
-              <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
+          <div className=" py-2 grid grid-cols-2 gap-x-20 gap-y-10 tablet:grid-cols-4 laptop:grid-cols-4 desktop:grid-cols-4 ">
+            <Link href="/services/deep-clean" className="group">
+              <div className="aspect-h-1 aspect-w-1 w-[289px] h-[389px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
-                  src="/img/5.png"
+                  src="/img/1.png"
                   alt="..."
-                  width="217"
-                  height="287"
+                  width="289"
+                  height="389"
                   className="h-full w-full object-cover  group-hover:opacity-75"
                 />
               </div>
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
-                Custom Paint Service
+                Services For Your Shoes & Sandals
               </h3>
             </Link>
-            <Link href="" className="group">
-              <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
+            <Link href="/services/reglue" className="group">
+              <div className="aspect-h-1 aspect-w-1  w-[289px] h-[389px]  overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
-                  src="/img/6.png"
+                  src="/img/2.png"
                   alt="..."
-                  width="217"
-                  height="287"
+                  width="289"
+                  height="389"
                   className="h-full w-full object-cover  group-hover:opacity-75"
                 />
               </div>
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
-                Whitening Upper Service
+                Services For Your Bags
               </h3>
             </Link>
             <Link href="" className="group">
-              <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
+              <div className="aspect-h-1 aspect-w-1  w-[289px] h-[389px]  overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
-                  src="/img/7.png"
+                  src="/img/3.png"
                   alt="..."
-                  width="217"
-                  height="287"
+                  width="289"
+                  height="389"
                   className="h-full w-full object-cover  group-hover:opacity-75"
                 />
               </div>
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
-                Unyellowing Midsole Service
+                Services For Your Hats
               </h3>
             </Link>
             <Link href="" className="group">
-              <div className="aspect-h-1 aspect-w-1 w-[217px] h-[287px] overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
+              <div className="aspect-h-1 aspect-w-1  w-[289px] h-[389px]  overflow-hidden  bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
-                  src="/img/8.png"
+                  src="/img/3.png"
                   alt="..."
-                  width="217"
-                  height="287"
+                  width="289"
+                  height="389"
                   className="h-full w-full object-cover  group-hover:opacity-75"
                 />
               </div>
               <h3 className="mt-2 text-sm text-gray-900 font-semibold">
-                Unyellowing Boost Service
+                Other Services
               </h3>
             </Link>
+           
           </div>
         </div>
       </div>
