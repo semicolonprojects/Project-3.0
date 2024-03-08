@@ -61,6 +61,11 @@ const Navbar = () => {
     closeNavbar();
   }, [router]); // Listen to changes in the route
 
+  const socials = () => {
+    setshowNavbar(false);
+    setshowModal(!showModal);
+  };
+
   return (
     <>
       {isTop && (
@@ -178,7 +183,7 @@ const Navbar = () => {
                 exit="hidden"
                 variants={contentVariants}
                 transition={{ delay: 1.2 }}
-                onClick={setshowModal}
+                onClick={socials}
                 className="hover:text-[#FFB62B]"
               >
                 Our Socials
