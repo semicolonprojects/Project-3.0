@@ -63,18 +63,18 @@ const Page = () => {
         </ul>
         <div className="py-5">
           {/*  Cards Service 1 */}
-          <div className=" py-2 grid grid-cols-2 gap-x-20 gap-y-10 tablet:grid-cols-4 laptop:grid-cols-4 desktop:grid-cols-4">
+          <div className=" py-2 grid grid-cols-2 gap-x-32 gap-y-10 tablet:grid-cols-4 laptop:grid-cols-4 desktop:grid-cols-4">
             {products?.map((product) => (
               <Link
                 href={`products/${product.slug}`}
                 className="group"
                 key={product.id}
               >
-                <div className="aspect-h-1 aspect-w-1 w-[289px] h-[389px] overflow-hidden bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
+                <div className="aspect-h-1 aspect-w-1 w-[250px] h-[389px] overflow-hidden bg-gray-300 xl:aspect-h-8 xl:aspect-w-7">
                   <Image
                     src={product.imageUrl}
                     alt={product.productName}
-                    width="289"
+                    width="250"
                     height="389"
                     className="h-full w-full object-cover group-hover:opacity-75"
                   />
