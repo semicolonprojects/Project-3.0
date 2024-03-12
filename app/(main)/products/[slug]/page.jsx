@@ -58,7 +58,7 @@ const Page = ({ params }) => {
         </div>
       ) : (
         <>
-          <div className="hidden tablet:block">
+          <div className="hidden tablet:block py-16">
             <DetailDesktop
               product={product}
               slicedRandomProducts={slicedRandomProducts}

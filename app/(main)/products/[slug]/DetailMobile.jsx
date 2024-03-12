@@ -8,7 +8,7 @@ const DetailMobile = ({
   randomProductsLoading,
 }) => {
   return (
-    <div className="grid grid-flow-row justify-center items-center pt-5 gap-5">
+    <div className="grid grid-flow-row justify-center items-center pt-36 gap-5">
       <nav className="relative " aria-label="Breadcrumb">
         <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
           <li className="inline-flex items-center">
