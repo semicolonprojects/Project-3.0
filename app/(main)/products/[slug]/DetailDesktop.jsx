@@ -10,8 +10,8 @@ const DetailDesktop = ({
   return (
     <div className="relative mx-14">
       <div className="grid grid-cols-2">
-        <div className="max-w-md w-full h-full ">
-          <div
+        <div className="max-w-md w-full h-full">
+          {/* <div
             style={{
               width: "100%",
               height: "560px",
@@ -25,6 +25,16 @@ const DetailDesktop = ({
               objectFit="contain"
               loading="lazy"
             />
+          </div> */}
+          <div className="w-[40rem] h-[30rem] flex justify-center items-center">
+            <div className="items-center h-64 w-96 relative">
+              <Image
+                alt={product.productName}
+                src={product.imageUrl}
+                layout="fill" // required
+                objectFit="fill" // change to suit your needs
+              />
+            </div>
           </div>
         </div>
 
