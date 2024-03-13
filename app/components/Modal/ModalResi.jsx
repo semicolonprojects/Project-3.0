@@ -34,7 +34,7 @@ const ModalResi = ({ showModal, inputValue, setshowModal }) => {
       onClose={() => setshowModal(false)}
       title="Cek Resi"
     >
-      <div className="flex flex-col md:flex-row p-2 gap-4 rounded-md">
+      <div className=" flex flex-col md:flex-row p-0 md:p-4 gap-1 md:gap-4 rounded-md">
         <div className="flex-grow bg-gray-200 flex flex-row items-center p-2 rounded-md gap-3">
           <MagnifyingGlassIcon className="w-5 h-5 text-gray-500" />
           <input
@@ -50,7 +50,7 @@ const ModalResi = ({ showModal, inputValue, setshowModal }) => {
         </button>
       </div>
 
-      <div className="flex flex-col md:flex-row p-2 gap-4 rounded-md mt-4">
+      <div className="block md:flex flex-col md:flex-row p-2 gap-4 rounded-md mt-2">
         <button
           type="button"
           className="text-white bg-blue-500 hover:bg-yellow-400 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-0.5 text-center me-2 mb-2 md:mb-0"
@@ -59,7 +59,7 @@ const ModalResi = ({ showModal, inputValue, setshowModal }) => {
         </button>
       </div>
 
-      <div className="grid grid-flow-col p-2 gap-4 rounded-md justify-center mt-4">
+      <div className="grid grid-flow-col p-1 md:p-2 gap-4 rounded-md justify-center mt-1.5 md:mt-4">
         <div className="grid grid-flow-row gap-3">
           <p className="font-semibold">Detail Status</p>
           <div className="grid grid-flow-col gap-4">
@@ -88,7 +88,7 @@ const ModalResi = ({ showModal, inputValue, setshowModal }) => {
             <p className="flex items-center">Joni</p>
           </div>
         </div>
-        <div className="grid grid-flow-row gap-3 items-center mt-4 md:mt-0">
+        <div className="grid grid-flow-row gap-3 items-center pl-4 mt-0 md:mt-0">
           <p className="font-semibold">Riwayat Pengiriman</p>
           <div className="bg-none max-w-md">
             <ol className="relative border-s border-gray-200">

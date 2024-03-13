@@ -55,7 +55,7 @@ const Sidebar = () => {
         {isSidebarHidden ? null : (
           <div
             className={`hidden tablet:block md:flex flex-col bg-[#D9D9D9] text-zinc-50 fixed md:translate-x-0 z-20 ${
-              isExpand ? "w-96" : "w-16"
+              isExpand ? "w-[36%]" : "w-16"
             } h-screen transition-all duration-300 ease-out`}
           >
             <div className="py-8 px-[23px] ">
@@ -130,8 +130,8 @@ const Sidebar = () => {
                       aria-label="Whatsapp"
                     >
                       <svg
-                        width="26"
-                        height="26"
+                        width="24"
+                        height="24"
                         viewBox="0 0 24 24"
                         alt="Whatsapp"
                         fill="none"
@@ -168,12 +168,12 @@ const Sidebar = () => {
             </div>
             {!isExpand && (
               <>
-                <div className="flex flex-col items-center  tablet:pt-64 laptop:pt-48 ">
+                <div className="flex flex-col items-center  tablet:pt-64 laptop:pt-40 ">
                   <Link href="/">
                     <Image src={Logo} height={50} width={50} alt="..." />
                   </Link>
                 </div>
-                <div className="grid py-42 tablet:py-96 laptop:py-[298px] desktop:py-40 grid-flow-row justify-center gap-7">
+                <div className="grid py-42 tablet:py-96 laptop:py-[298px] desktop:py-24 grid-flow-row justify-center gap-7">
                   <div>
                     <Link
                       href="https://www.instagram.com/nettoyer.shoes/"

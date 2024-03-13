@@ -31,12 +31,12 @@ const ServicesProducts = () => {
   }, []);
 
   return (
-    <div className="relative pt-24 pb-5 px-3 tablet:mx-24 tablet:w-[85.9%] w-full">
+    <div className="relative pt-12 pb-5 mx-3 tablet:mx-28 tablet:w-[85.9%] w-full">
       <p className="text-yellow-500 py-5 font-bold text-2xl md:text-4xl lg:text-5xl">
         Our Services & Products
       </p>
-      <div className="grid grid-cols-1 tablet:grid-flow-col gap-5">
-        <div className="w-full tablet:w-[855px] h-auto rounded overflow-hidden">
+      <div className="grid grid-cols-1 tablet:grid-flow-col gap-x-10">
+        <div className="w-full tablet:w-[825px] h-auto rounded overflow-hidden">
           {mobilePlayer ? (
             <iframe
               src="https://www.youtube.com/embed/-T9xnc9RmDE?si=cx3H1SiS1ur8nLWM"
@@ -61,7 +61,7 @@ const ServicesProducts = () => {
           )}
         </div>
         <div className="grid grid-flow-row gap-5">
-          <div className="relative w-full tablet:w-[380px] tablet:h-[380px] h-full rounded overflow-hidden">
+          <div className="relative w-full tablet:w-[300px] tablet:h-[300px] h-full rounded overflow-hidden">
             <div className="absolute inset-0 bg-black opacity-40"></div>
             <Image
               src={TravelKit}
@@ -76,7 +76,7 @@ const ServicesProducts = () => {
           </div>
           <Link href="/services">
             <div className="rounded overflow-hidden shadow-lg">
-              <div className="relative w-full tablet:w-[380px] tablet:h-[380px] h-full  rounded overflow-hidden">
+              <div className="relative w-full tablet:w-[300px] tablet:h-[300px] h-full  rounded overflow-hidden">
                 <div className="absolute inset-0 bg-black opacity-40"></div>
                 <Image
                   src={Services}

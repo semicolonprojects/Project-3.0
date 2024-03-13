@@ -69,9 +69,9 @@ const Navbar = () => {
   return (
     <>
       {isTop && (
-        <nav className="hidden tablet:block bg-[#D9D9D9] p-4 text-[#4A89B0] fixed w-full z-10">
+        <nav className="hidden tablet:block  translate-y-0 transition-transform touch-pan-y bg-[#D9D9D9] p-2.5 text-[#4A89B0] fixed w-full h-11 z-10">
           {/* Your navbar content goes here */}
-          <p className="text-center text-4xl">PROMOPROMOPROMO</p>
+          <p className="text-center text-base">PROMOPROMOPROMO</p>
         </nav>
       )}
 
