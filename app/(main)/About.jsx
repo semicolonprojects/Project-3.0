@@ -72,12 +72,12 @@ const About = () => {
         </div>
       </div>
       <div className="block tablet:hidden px-7">
-        <p className="text-yellow-500 py-5 font-bold text-2xl px-1">About Us</p>
-        <div className="pt-2 font-semibold tablet:font-semibold tablet:pt-5 px-1 tablet:px-0 text-[#4EAEFD] text-sm tablet:text-base tracking-tighter leading-relaxed max-w-96">
+        <p className="text-yellow-500 py-5 pb-2 font-bold text-2xl px-1">About Us</p>
+        <div className="font-semibold tablet:font-semibold tablet:pt-5 px-1 tablet:px-0 text-[#4EAEFD] text-sm tablet:text-base text-pretty leading-normal  max-w-96">
           <p>
             Nettoyer Shoes merupakan usaha di bidang jasa laundry sepatu, tas,
             dan topi yang berdiri di kota Malang sejak tahun 2019.
-            Nettoyer.Shoes beralamatkan di Jl. Danau Ranau VI G5i7 sawojajar,
+            Nettoyer Shoes beralamatkan di Jl. Danau Ranau VI G5i7 sawojajar,
             Kota Malang, Jawa Timur. Saat ini kami sudah berhasil menangani
             lebih dari ribuan pasang Sepatu, ratusan tas dan topi, yang berarti
             sudah dipercaya oleh Masyarakat kota Malang untuk menjadi partner
