@@ -54,7 +54,7 @@ function Services() {
     >
       <Image
         src={Before}
-        className="h-[300px] tablet:h-[530px] w-fill pointer-events-none"
+        className="h-[300px] tablet:h-[730px] w-fill pointer-events-none"
         alt="..."
         loading="lazy"
       />
@@ -66,7 +66,7 @@ function Services() {
             imageRevealFraq * 100
           }% 100%, 0 100%)`,
         }}
-        className="h-[300px] tablet:h-[530px] w-fill absolute inset-0  pointer-events-none"
+        className="h-[300px] tablet:h-[730px] w-fill absolute inset-0  pointer-events-none"
         alt="..."
         loading="lazy"
       />

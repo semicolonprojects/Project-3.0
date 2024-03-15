@@ -64,7 +64,7 @@ const Navbar = () => {
   const socials = () => {
     setshowNavbar(false);
     setshowModal(!showModal);
-  };
+  };
 
   return (
     <>
@@ -82,11 +82,11 @@ const Navbar = () => {
           isTop
             ? "translate-y-0 transition-transform duration-75 touch-pan-y"
             : "transform-none transition-transform"
-        } z-20 left-0  absolute bg-red-500 text-center p-3 h-11`}
+        } z-20 left-0  absolute bg-[#D9D9D9] text-center p-3 h-11`}
         tabIndex={10}
         aria-hidden="true"
       >
-        <p>PROMOPROMOPROMO</p>
+        <p className="text-[#4A89B0]">PROMOPROMOPROMO</p>
       </div>
       <nav
         className={`tablet:hidden fixed ${
@@ -164,17 +164,17 @@ const Navbar = () => {
                 </motion.button>
               </Link>
               <Link href="/products">
-              <motion.button
-                key=" Our Products"
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={contentVariants}
-                transition={{ delay: 0.8 }}
-                className="hover:text-[#FFB62B]"
-              >
-                Our Products
-              </motion.button>
+                <motion.button
+                  key=" Our Products"
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={contentVariants}
+                  transition={{ delay: 0.8 }}
+                  className="hover:text-[#FFB62B]"
+                >
+                  Our Products
+                </motion.button>
               </Link>
               <motion.button
                 key="Our Socials"
