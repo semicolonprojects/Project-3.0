@@ -35,14 +35,14 @@ const ServicesProducts = () => {
       <p className="text-yellow-500 py-5 font-bold text-2xl md:text-4xl lg:text-5xl">
         Our Services & Products
       </p>
-      <div className="grid grid-cols-1 tablet:grid-flow-col gap-x-10">
+      <div className="grid grid-cols-1 gap-9 tablet:grid-flow-col gap-x-10">
         <div className="w-full tablet:w-[825px] h-auto rounded overflow-hidden">
           {mobilePlayer ? (
             <iframe
               src="https://www.youtube.com/embed/-T9xnc9RmDE?si=cx3H1SiS1ur8nLWM"
               title="YouTube video player"
               frameBorder="0"
-              width={365}
+              width={340}
               height={500}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
@@ -60,8 +60,8 @@ const ServicesProducts = () => {
             />
           )}
         </div>
-        <div className="grid grid-flow-row gap-5">
-          <div className="relative w-full tablet:w-[300px] tablet:h-[300px] h-full rounded overflow-hidden">
+        <div className="grid grid-flow-row gap-9 tablet:gap-5">
+          <div className="relative w-[340px] tablet:w-[300px] tablet:h-[300px] h-full rounded overflow-hidden shadow-lg">
             <div className="absolute inset-0 bg-black opacity-40"></div>
             <Image
               src={TravelKit}
@@ -75,8 +75,8 @@ const ServicesProducts = () => {
             </Link>
           </div>
           <Link href="/services">
-            <div className="rounded overflow-hidden shadow-lg">
-              <div className="relative w-full tablet:w-[300px] tablet:h-[300px] h-full  rounded overflow-hidden">
+            <div className="rounded overflow-hidden w-fit shadow-lg">
+              <div className="relative w-[340px] tablet:w-[300px] tablet:h-[300px] h-full  rounded overflow-hidden">
                 <div className="absolute inset-0 bg-black opacity-40"></div>
                 <Image
                   src={Services}

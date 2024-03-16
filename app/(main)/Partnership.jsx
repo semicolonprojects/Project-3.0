@@ -2,11 +2,11 @@ import Link from "next/link";
 
 const Partnership = () => {
   return (
-    <div className="pt-10 px-7 tablet:px-8 laptop:px-16 desktop:px-32 flex flex-col h-auto md:h-96 w-full">
-      <p className="text-[#FFB62B] font-bold text-xl tablet:text-5xl">
+    <div className="py-5 px-7 tablet:px-8 laptop:px-16 desktop:px-32 flex flex-col h-auto md:h-96 w-full">
+      <p className="text-[#FFB62B] font-bold text-3xl tablet:text-5xl">
         Our Partnership Program
       </p>
-      <p className="text-[#4EAEFD] pt-2 tablet:px-1 font-semibold text-base tablet:text-[22px]">
+      <p className="text-[#4EAEFD] pt-2 tablet:px-1 font-semibold text-[18px] tablet:text-[22px]">
         Learn more about our partnership program below
       </p>
       <div className="py-2.5 tablet:py-5 tablet:px-2">

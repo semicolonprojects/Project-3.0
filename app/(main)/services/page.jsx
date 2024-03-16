@@ -1,10 +1,8 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useRef, useEffect } from "react";
-import Before from "/public/img/before.png";
-import After from "/public/img/after.png";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import ImageSlider from "./ImageSlider";
 
 function Page() {
   const [services, setServices] = useState([]);
@@ -26,6 +24,7 @@ function Page() {
   return (
     <>
       <div className="py-16 tablet:py-5 w-full ">
+        <ImageSlider />
         {/*  Cards Service 1 */}
         <div className="py-2 grid grid-rows-1 gap-x-7 gap-y-10 tablet:grid-flow-col justify-center tablet:justify-start items-center tablet:items-start">
           <Link href="/services/deep-clean" className="group">

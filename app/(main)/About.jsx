@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
 import WhiteShoes from "../../public/img/sepatu_putih(home).png";
-import Logo2 from "../../public/img/logo1.png";
+import gif from "../../public/img/Video estetik sementara.gif";
 
 const About = () => {
   return (
     <>
-      <div className="w-full h-auto">
+      {/* Desktop View */}
+      <div className="hidden tablet:block w-full h-auto">
         <div className="hidden tablet:block relative">
           <Image
             src={WhiteShoes}
@@ -16,14 +17,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="text-[#FFB62B] font-bold tablet:absolute tablet:px-32 px-3 py-10 tablet:py-32 ">
-        <div className="block tablet:hidden">
-          <Image
-            src={Logo2}
-            alt="logo2"
-            className="items-center w-80 h-full pb-5"
-          />
-        </div>
+      <div className="hidden tablet:block text-[#FFB62B] font-bold tablet:absolute tablet:px-32 px-3 py-10 tablet:py-32 ">
         <div className="inline-flex tablet:grid tablet:grid-rows-2">
           <p className="text-4xl tablet:text-5xl lg:text-5xl xl:text-6xl">
             Nettoyer
@@ -45,6 +39,45 @@ const About = () => {
             Nettoyer Shoes merupakan usaha di bidang jasa laundry sepatu, tas,
             dan topi yang berdiri di kota Malang sejak tahun 2019.
             Nettoyer.Shoes beralamatkan di Jl. Danau Ranau VI G5i7 sawojajar,
+            Kota Malang, Jawa Timur. Saat ini kami sudah berhasil menangani
+            lebih dari ribuan pasang Sepatu, ratusan tas dan topi, yang berarti
+            sudah dipercaya oleh Masyarakat kota Malang untuk menjadi partner
+            mereka dalam perawatan Sepatu, tas, dan topi. Pada tahun 2022
+            Nettoyer.Shoes mulai melebarkan sayapnya ke Kota Purwokerto untuk
+            membantu Masyarakat Purwokerto merawat Sepatu, tas, dan topinya.
+            Cabang ke 2 ini mulai diperkenalkan pada tanggal 24 September 2022.
+          </p>
+        </div>
+      </div>
+
+      {/* Mobile  View */}
+
+      <div className="block tablet:hidden px-28 w-full h-screen">
+        <Image
+          src={gif}
+          alt="White Shoes"
+          fill
+          objectFit="cover"
+          objectPosition="center"
+          className="w-full h-full"
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.72] flex items-center justify-center">
+          <div className="text-white text-center p-10 tablet:p-0 w-screen tablet:w-fit max-h-screen md:max-h-max">
+            <div className="absolute inset-x-16 bottom-0">
+              <p className="text-center py-10 text-[#FFB62B] text-2xl font-bold">
+                Make Your Foot Sparks !
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="block tablet:hidden px-7">
+        <p className="text-yellow-500 py-5 pb-2 font-bold text-2xl px-1">About Us</p>
+        <div className="font-semibold tablet:font-semibold tablet:pt-5 px-1 tablet:px-0 text-[#4EAEFD] text-sm tablet:text-base text-pretty leading-normal  max-w-96">
+          <p>
+            Nettoyer Shoes merupakan usaha di bidang jasa laundry sepatu, tas,
+            dan topi yang berdiri di kota Malang sejak tahun 2019.
+            Nettoyer Shoes beralamatkan di Jl. Danau Ranau VI G5i7 sawojajar,
             Kota Malang, Jawa Timur. Saat ini kami sudah berhasil menangani
             lebih dari ribuan pasang Sepatu, ratusan tas dan topi, yang berarti
             sudah dipercaya oleh Masyarakat kota Malang untuk menjadi partner
